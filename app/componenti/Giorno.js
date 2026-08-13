@@ -12,17 +12,31 @@ function stileSezione(titolo) {
   return CLASSI.find((c) => c.test.test(titolo)) || { classe: '', firma: '' };
 }
 
+function Brano({ testo, aperto = false }) {
+  if (!testo) return null;
+  return (
+    <details className="brano" open={aperto || undefined}>
+      <summary>Leggi il testo</summary>
+      <p className="testo-sacro">{testo}</p>
+    </details>
+  );
+}
+
 export default function Giorno({ giorno }) {
   const { meta, sezioni } = giorno;
   const dataIT = new Date(giorno.data + 'T12:00:00Z').toLocaleDateString('it-IT', {
     weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Paris',
   });
+  const haBizantino = meta.vangelo_ortodosso || meta.epistola_ortodossa;
 
   return (
     <article>
-      <p className="eyebrow">{dataIT}</p>
-      <h1 className="titolo">{meta.titolo && meta.titolo !== 'DA INSERIRE' ? meta.titolo : 'Il Vangelo del giorno'}</h1>
-      <p className="sottotitolo">Quattro voci, un criterio: il dono.</p>
+      <header className="capo">
+        <p className="eyebrow">{dataIT}</p>
+        <h1 className="titolo">{meta.titolo && meta.titolo !== 'DA INSERIRE' ? meta.titolo : 'Il Vangelo del giorno'}</h1>
+        <p className="sottotitolo">Quattro voci, un criterio: il dono.</p>
+        <div className="fregio" aria-hidden="true">❦</div>
+      </header>
 
       {meta.demo ? (
         <p className="demo-nota">
@@ -31,19 +45,45 @@ export default function Giorno({ giorno }) {
         </p>
       ) : null}
 
-      <dl className="letture">
-        <dt>Vangelo (lezionario cattolico)</dt>
-        <dd>{meta.vangelo || '—'}</dd>
-        {meta.vangelo_testo ? <dd className="testo-sacro">{meta.vangelo_testo}</dd> : null}
-        {meta.prima_lettura ? (<><dt>Prima lettura</dt><dd>{meta.prima_lettura}</dd></>) : null}
-        {meta.prima_testo ? <dd className="testo-sacro">{meta.prima_testo}</dd> : null}
-        {meta.salmo ? (<><dt>Salmo</dt><dd>{meta.salmo}</dd></>) : null}
-        {meta.salmo_testo ? <dd className="testo-sacro">{meta.salmo_testo}</dd> : null}
-        {meta.vangelo_ortodosso ? (<><dt>Vangelo (lezionario bizantino)</dt><dd>{meta.vangelo_ortodosso}</dd></>) : null}
-        {meta.vangelo_ortodosso_testo ? <dd className="testo-sacro">{meta.vangelo_ortodosso_testo}</dd> : null}
-        {meta.epistola_ortodossa ? (<><dt>Epistola (lezionario bizantino)</dt><dd>{meta.epistola_ortodossa}</dd></>) : null}
-        {meta.epistola_ortodossa_testo ? <dd className="testo-sacro">{meta.epistola_ortodossa_testo}</dd> : null}
-      </dl>
+      <div className="letture">
+        <section className="lezione">
+          <h3 className="lezione-capo">Lezionario romano</h3>
+          <p className="rif"><span className="segno" aria-hidden="true">✠</span>{meta.vangelo || '—'}</p>
+          <Brano testo={meta.vangelo_testo} aperto />
+          {meta.prima_lettura ? (
+            <>
+              <p className="rif">{meta.prima_lettura}</p>
+              <Brano testo={meta.prima_testo} />
+            </>
+          ) : null}
+          {meta.salmo ? (
+            <>
+              <p className="rif">{meta.salmo}</p>
+              <Brano testo={meta.salmo_testo} />
+            </>
+          ) : null}
+        </section>
+
+        {haBizantino ? (
+          <section className="lezione">
+            <h3 className="lezione-capo">Lezionario bizantino</h3>
+            {meta.vangelo_ortodosso ? (
+              <>
+                <p className="rif"><span className="segno" aria-hidden="true">✠</span>{meta.vangelo_ortodosso}</p>
+                <Brano testo={meta.vangelo_ortodosso_testo} />
+              </>
+            ) : null}
+            {meta.epistola_ortodossa ? (
+              <>
+                <p className="rif">{meta.epistola_ortodossa}</p>
+                <Brano testo={meta.epistola_ortodossa_testo} />
+              </>
+            ) : null}
+          </section>
+        ) : null}
+      </div>
+
+      <div className="fregio" aria-hidden="true">❦</div>
 
       {sezioni.map((s) => {
         const { classe, firma } = stileSezione(s.titolo);
@@ -51,7 +91,7 @@ export default function Giorno({ giorno }) {
           <section key={s.titolo} className={`voce ${classe}`}>
             <h2>{s.titolo}</h2>
             {firma ? <p className="firma">{firma}</p> : null}
-            <div dangerouslySetInnerHTML={{ __html: marked.parse(s.corpo) }} />
+            <div className="corpo" dangerouslySetInnerHTML={{ __html: marked.parse(s.corpo) }} />
           </section>
         );
       })}

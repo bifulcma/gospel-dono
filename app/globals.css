@@ -1,95 +1,224 @@
+/* ── Il Vangelo del giorno come dono — manoscritto liturgico moderno ──
+   Palette chiara: crema, avorio, terracotta, rame. Niente dark, niente oro. */
+
 :root {
-  --bg: #FAF9F5;
-  --card: #FFFFFF;
-  --line: #E8E4DC;
+  --bg: #FAF6EE;
+  --carta: #FFFDF7;
+  --pergamena: #FCF7EA;
+  --line: #E8E0CE;
+  --line-forte: #D9CDB2;
   --terracotta: #C2664A;
-  --terracotta-scuro: #A34E35;
-  --wash: #FBF0EA;
-  --ink: #29261F;
-  --muted: #6b6355;
+  --terracotta-scuro: #A0472E;
+  --rame: #A9744C;
+  --wash: #F8EDE3;
+  --ink: #2E2A20;
+  --muted: #6E6455;
   --porpora: #7A2E3C;
-  --salvia: #6B8F71;
-  --bruno: #8A6B4F;
-  --serif: Georgia, "Times New Roman", serif;
+  --salvia: #56795D;
+  --bruno: #83644A;
+  --serif: var(--font-serif), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-behavior: smooth; }
+
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  /* filigrana: grana carta leggerissima + due veli radiali caldi */
+  background-image:
+    radial-gradient(1100px 420px at 50% -160px, rgba(194, 102, 74, 0.055), transparent 70%),
+    radial-gradient(900px 500px at 105% 105%, rgba(169, 116, 76, 0.045), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23g)' opacity='0.022'/%3E%3C/svg%3E");
+  background-attachment: fixed;
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--sans);
   line-height: 1.65;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--terracotta-scuro); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--terracotta-scuro); text-decoration: none; transition: color .18s ease; }
+a:hover { color: var(--terracotta); }
+:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
 
-.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem 4.5rem; }
 
+/* ── Header: sigillo, titolo, regola doppia da codice ── */
 header.sito {
-  border-bottom: 1px solid var(--line);
-  background: var(--card);
-  margin-bottom: 2rem;
+  background: linear-gradient(var(--carta), var(--bg));
+  border-bottom: 3px double var(--line-forte);
+  margin-bottom: 2.5rem;
 }
 header.sito .dentro {
-  max-width: 46rem; margin: 0 auto; padding: 1rem 1.25rem;
-  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+  max-width: 44rem; margin: 0 auto; padding: 1.6rem 1.25rem 1.1rem;
+  display: flex; flex-direction: column; align-items: center; gap: .55rem; text-align: center;
 }
-.logo { font-family: var(--serif); font-size: 1.25rem; color: var(--ink); }
+.sigillo {
+  display: block; color: var(--terracotta); font-size: 1.15rem; line-height: 1;
+  letter-spacing: .5em; margin-left: .5em; /* compensa lo spacing dell'ultimo glifo */
+  user-select: none;
+}
+.logo {
+  font-family: var(--serif); font-weight: 500; font-size: 1.7rem; color: var(--ink);
+  letter-spacing: .02em;
+}
 .logo em { color: var(--terracotta-scuro); font-style: italic; }
-nav.principale { display: flex; gap: 1.25rem; font-size: .85rem; }
-
-h1.titolo { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 5vw, 2.3rem); margin-bottom: .25rem; }
-.sottotitolo { color: var(--muted); font-size: .95rem; margin-bottom: 1.5rem; }
-
-.eyebrow { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--terracotta); font-weight: 600; }
-
-.letture {
-  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-  padding: 1.1rem 1.25rem; margin-bottom: 2rem; font-size: .95rem;
+.logo:hover { color: var(--ink); }
+.logo:hover em { color: var(--terracotta); }
+.motto {
+  font-family: var(--serif); font-style: italic; color: var(--muted);
+  font-size: .95rem; margin-top: -0.35rem;
 }
-.letture dt { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
-.letture dt:first-child { margin-top: 0; }
-.letture dd { font-family: var(--serif); font-size: 1.05rem; }
-.letture dd.testo-sacro { font-family: var(--serif); font-size: 1rem; line-height: 1.65; color: var(--ink); margin-top: .35rem; padding-top: .35rem; border-top: 1px dashed var(--line); white-space: pre-line; }
+nav.principale { display: flex; gap: 1.8rem; margin-top: .35rem; }
+nav.principale a {
+  font-size: .72rem; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--muted); padding-bottom: .15rem; border-bottom: 1px solid transparent;
+  transition: color .18s ease, border-color .18s ease;
+}
+nav.principale a:hover { color: var(--terracotta-scuro); border-bottom-color: var(--terracotta); }
 
+/* ── Capolettera di pagina: data, titolo, fregio ── */
+.capo { text-align: center; margin-bottom: 2rem; }
+.eyebrow {
+  font-size: .7rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--terracotta); font-weight: 600;
+}
+h1.titolo {
+  font-family: var(--serif); font-weight: 500; font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+  line-height: 1.2; margin: .4rem 0 .3rem; text-wrap: balance;
+}
+.sottotitolo { font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 1.05rem; }
+
+.fregio {
+  display: flex; align-items: center; gap: 1rem; margin: 1.4rem auto;
+  color: var(--rame); font-size: 1.05rem; max-width: 20rem; user-select: none;
+}
+.fregio::before, .fregio::after { content: ""; flex: 1; border-top: 1px solid var(--line-forte); }
+
+/* ── Le lezioni: blocchi da manoscritto ── */
+.letture { margin-bottom: 2.4rem; display: grid; gap: 1.1rem; }
+.lezione {
+  background: var(--pergamena);
+  border: 1px solid var(--line-forte);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 3px var(--pergamena), inset 0 0 0 4px var(--line); /* doppio filetto interno */
+  padding: 1.35rem 1.4rem 1.2rem;
+}
+.lezione-capo {
+  font-size: .68rem; letter-spacing: .26em; text-transform: uppercase; font-weight: 600;
+  color: var(--rame); text-align: center; margin-bottom: .9rem;
+}
+.lezione-capo::before, .lezione-capo::after { content: " · "; color: var(--line-forte); }
+.rif {
+  font-family: var(--serif); font-size: 1.12rem; font-weight: 600; color: var(--ink);
+  margin: .7rem 0 .15rem;
+}
+.rif:first-of-type { margin-top: 0; }
+.rif .segno { color: var(--terracotta); margin-right: .45rem; font-weight: 400; }
+details.brano { margin: .15rem 0 .5rem; }
+details.brano summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: baseline; gap: .4rem;
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+  transition: color .18s ease;
+}
+details.brano summary::-webkit-details-marker { display: none; }
+details.brano summary::before { content: "❧"; color: var(--terracotta); font-size: .9rem; }
+details.brano summary:hover { color: var(--terracotta-scuro); }
+details.brano[open] summary { color: var(--terracotta-scuro); margin-bottom: .45rem; }
+.testo-sacro {
+  font-family: var(--serif); font-size: 1.14rem; line-height: 1.72; color: var(--ink);
+  border-left: 2px solid var(--line-forte); padding-left: 1rem; margin: .35rem 0 .4rem;
+  white-space: pre-line; text-wrap: pretty;
+}
+
+/* ── Le voci: pannelli con capolettera ── */
 .voce {
-  background: var(--card); border: 1px solid var(--line); border-left-width: 4px;
-  border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1.25rem;
+  position: relative;
+  background: var(--carta);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line-forte);
+  border-radius: 4px;
+  padding: 1.6rem 1.6rem 1.45rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 1px 2px rgba(46, 42, 32, .04);
+  transition: box-shadow .25s ease, transform .25s ease;
 }
-.voce h2 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; margin-bottom: .2rem; }
-.voce .firma { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
-.voce p { margin-bottom: .8rem; }
-.voce p:last-child { margin-bottom: 0; }
-.voce blockquote { border-left: 2px solid var(--line); padding-left: 1rem; color: var(--muted); font-style: italic; margin: .8rem 0; }
-.voce em { color: inherit; }
+.voce:hover { box-shadow: 0 6px 22px -12px rgba(46, 42, 32, .22); transform: translateY(-1px); }
+.voce h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.05rem;
+  letter-spacing: .16em; text-transform: uppercase; margin-bottom: .15rem;
+}
+.voce .firma {
+  font-family: var(--serif); font-style: italic; font-size: .92rem; color: var(--muted);
+  margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line);
+}
+.voce .corpo { font-family: var(--serif); font-size: 1.16rem; line-height: 1.7; }
+.voce .corpo p { margin-bottom: .85rem; text-wrap: pretty; }
+.voce .corpo p:last-child { margin-bottom: 0; }
+.voce .corpo blockquote { border-left: 2px solid var(--line-forte); padding-left: 1rem; color: var(--muted); font-style: italic; margin: .85rem 0; }
 
-.voce.dono { border-left-color: var(--terracotta-scuro); background: var(--wash); }
-.voce.dono h2 { color: var(--terracotta-scuro); }
+/* capolettera del primo paragrafo, nel colore della voce */
+.voce .corpo > p:first-of-type::first-letter {
+  float: left; font-family: var(--serif); font-weight: 500;
+  font-size: 3.05em; line-height: .82; padding: .04em .09em 0 0;
+}
+
+/* accenti per voce */
+.voce.dono { border-left-color: var(--terracotta-scuro); background: linear-gradient(var(--wash), var(--carta) 82%); }
+.voce.dono h2, .voce.dono .corpo > p:first-of-type::first-letter { color: var(--terracotta-scuro); }
 .voce.cattolica { border-left-color: var(--terracotta); }
-.voce.cattolica h2 { color: var(--terracotta); }
+.voce.cattolica h2, .voce.cattolica .corpo > p:first-of-type::first-letter { color: var(--terracotta); }
 .voce.ortodossa { border-left-color: var(--porpora); }
-.voce.ortodossa h2 { color: var(--porpora); }
+.voce.ortodossa h2, .voce.ortodossa .corpo > p:first-of-type::first-letter { color: var(--porpora); }
 .voce.protestante { border-left-color: var(--salvia); }
-.voce.protestante h2 { color: var(--salvia); }
+.voce.protestante h2, .voce.protestante .corpo > p:first-of-type::first-letter { color: var(--salvia); }
 .voce.dispensazionalista { border-left-color: var(--bruno); }
-.voce.dispensazionalista h2 { color: var(--bruno); }
+.voce.dispensazionalista h2, .voce.dispensazionalista .corpo > p:first-of-type::first-letter { color: var(--bruno); }
 
-.nav-date { display: flex; justify-content: space-between; margin: 2rem 0 0; font-size: .9rem; }
+/* ── Navigazione tra i giorni ── */
+.nav-date {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 2.2rem; padding-top: 1.1rem; border-top: 3px double var(--line-forte);
+  font-family: var(--serif); font-size: 1.02rem;
+}
 
 .demo-nota {
-  background: #FDF6EE; border: 1px solid #ECD9BD; border-radius: 10px;
-  padding: .7rem 1rem; font-size: .85rem; color: #7A5C3A; margin-bottom: 1.5rem;
+  background: var(--pergamena); border: 1px solid var(--line-forte); border-radius: 4px;
+  padding: .7rem 1rem; font-size: .85rem; color: var(--rame); margin-bottom: 1.6rem;
+  text-align: center; font-style: italic; font-family: var(--serif);
 }
 
-ul.archivio { list-style: none; }
-ul.archivio li { border-bottom: 1px dashed var(--line); padding: .8rem 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-ul.archivio .data { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .9rem; }
+/* ── Archivio: indice da codice ── */
+ul.archivio { list-style: none; margin-top: .5rem; }
+ul.archivio li { border-bottom: 1px solid var(--line); transition: background .18s ease; }
+ul.archivio li:first-child { border-top: 3px double var(--line-forte); }
+ul.archivio li:hover { background: var(--carta); }
+ul.archivio a {
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline;
+  padding: .95rem .4rem; color: var(--ink);
+}
+ul.archivio a:hover .titolo-arch { color: var(--terracotta-scuro); }
+ul.archivio .titolo-arch { font-family: var(--serif); font-size: 1.12rem; transition: color .18s ease; }
+ul.archivio .data { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .82rem; letter-spacing: .08em; }
 
-footer.sito { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1.5rem 1.25rem; text-align: center; color: #a99f8c; font-size: .8rem; line-height: 1.7; }
+/* ── Footer ── */
+footer.sito {
+  border-top: 3px double var(--line-forte); margin-top: 3.5rem;
+  padding: 1.8rem 1.25rem 2.4rem; text-align: center; color: var(--muted);
+  font-size: .82rem; line-height: 1.8;
+}
+footer.sito .fregio { margin: 0 auto 1rem; max-width: 14rem; }
+footer.sito em { font-family: var(--serif); font-style: italic; font-size: .95rem; }
 
 @media (max-width: 480px) {
-  .voce { padding: 1.1rem 1.1rem; }
+  .voce { padding: 1.2rem 1.1rem 1.1rem; }
+  .lezione { padding: 1.1rem 1rem 1rem; }
+  nav.principale { gap: 1.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
 }
