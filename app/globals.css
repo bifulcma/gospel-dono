@@ -53,6 +53,7 @@ h1.titolo { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem
 .letture dt { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
 .letture dt:first-child { margin-top: 0; }
 .letture dd { font-family: var(--serif); font-size: 1.05rem; }
+.letture dd.testo-sacro { font-family: var(--serif); font-size: 1rem; line-height: 1.65; color: var(--ink); margin-top: .35rem; padding-top: .35rem; border-top: 1px dashed var(--line); white-space: pre-line; }
 
 .voce {
   background: var(--card); border: 1px solid var(--line); border-left-width: 4px;

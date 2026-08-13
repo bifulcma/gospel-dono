@@ -34,8 +34,11 @@ export default function Giorno({ giorno }) {
       <dl className="letture">
         <dt>Vangelo (lezionario cattolico)</dt>
         <dd>{meta.vangelo || '—'}</dd>
+        {meta.vangelo_testo ? <dd className="testo-sacro">{meta.vangelo_testo}</dd> : null}
         {meta.prima_lettura ? (<><dt>Prima lettura</dt><dd>{meta.prima_lettura}</dd></>) : null}
+        {meta.prima_testo ? <dd className="testo-sacro">{meta.prima_testo}</dd> : null}
         {meta.salmo ? (<><dt>Salmo</dt><dd>{meta.salmo}</dd></>) : null}
+        {meta.salmo_testo ? <dd className="testo-sacro">{meta.salmo_testo}</dd> : null}
         {meta.vangelo_ortodosso ? (<><dt>Vangelo (lezionario bizantino)</dt><dd>{meta.vangelo_ortodosso}</dd></>) : null}
         {meta.epistola_ortodossa ? (<><dt>Epistola (lezionario bizantino)</dt><dd>{meta.epistola_ortodossa}</dd></>) : null}
       </dl>
