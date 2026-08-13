@@ -40,7 +40,9 @@ export default function Giorno({ giorno }) {
         {meta.salmo ? (<><dt>Salmo</dt><dd>{meta.salmo}</dd></>) : null}
         {meta.salmo_testo ? <dd className="testo-sacro">{meta.salmo_testo}</dd> : null}
         {meta.vangelo_ortodosso ? (<><dt>Vangelo (lezionario bizantino)</dt><dd>{meta.vangelo_ortodosso}</dd></>) : null}
+        {meta.vangelo_ortodosso_testo ? <dd className="testo-sacro">{meta.vangelo_ortodosso_testo}</dd> : null}
         {meta.epistola_ortodossa ? (<><dt>Epistola (lezionario bizantino)</dt><dd>{meta.epistola_ortodossa}</dd></>) : null}
+        {meta.epistola_ortodossa_testo ? <dd className="testo-sacro">{meta.epistola_ortodossa_testo}</dd> : null}
       </dl>
 
       {sezioni.map((s) => {
