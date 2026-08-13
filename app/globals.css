@@ -1,0 +1,94 @@
+:root {
+  --bg: #FAF9F5;
+  --card: #FFFFFF;
+  --line: #E8E4DC;
+  --terracotta: #C2664A;
+  --terracotta-scuro: #A34E35;
+  --wash: #FBF0EA;
+  --ink: #29261F;
+  --muted: #6b6355;
+  --porpora: #7A2E3C;
+  --salvia: #6B8F71;
+  --bruno: #8A6B4F;
+  --serif: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+a { color: var(--terracotta-scuro); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+header.sito {
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  margin-bottom: 2rem;
+}
+header.sito .dentro {
+  max-width: 46rem; margin: 0 auto; padding: 1rem 1.25rem;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+}
+.logo { font-family: var(--serif); font-size: 1.25rem; color: var(--ink); }
+.logo em { color: var(--terracotta-scuro); font-style: italic; }
+nav.principale { display: flex; gap: 1.25rem; font-size: .85rem; }
+
+h1.titolo { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 5vw, 2.3rem); margin-bottom: .25rem; }
+.sottotitolo { color: var(--muted); font-size: .95rem; margin-bottom: 1.5rem; }
+
+.eyebrow { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--terracotta); font-weight: 600; }
+
+.letture {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1.1rem 1.25rem; margin-bottom: 2rem; font-size: .95rem;
+}
+.letture dt { font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: .5rem; }
+.letture dt:first-child { margin-top: 0; }
+.letture dd { font-family: var(--serif); font-size: 1.05rem; }
+
+.voce {
+  background: var(--card); border: 1px solid var(--line); border-left-width: 4px;
+  border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1.25rem;
+}
+.voce h2 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; margin-bottom: .2rem; }
+.voce .firma { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
+.voce p { margin-bottom: .8rem; }
+.voce p:last-child { margin-bottom: 0; }
+.voce blockquote { border-left: 2px solid var(--line); padding-left: 1rem; color: var(--muted); font-style: italic; margin: .8rem 0; }
+.voce em { color: inherit; }
+
+.voce.dono { border-left-color: var(--terracotta-scuro); background: var(--wash); }
+.voce.dono h2 { color: var(--terracotta-scuro); }
+.voce.cattolica { border-left-color: var(--terracotta); }
+.voce.cattolica h2 { color: var(--terracotta); }
+.voce.ortodossa { border-left-color: var(--porpora); }
+.voce.ortodossa h2 { color: var(--porpora); }
+.voce.protestante { border-left-color: var(--salvia); }
+.voce.protestante h2 { color: var(--salvia); }
+.voce.dispensazionalista { border-left-color: var(--bruno); }
+.voce.dispensazionalista h2 { color: var(--bruno); }
+
+.nav-date { display: flex; justify-content: space-between; margin: 2rem 0 0; font-size: .9rem; }
+
+.demo-nota {
+  background: #FDF6EE; border: 1px solid #ECD9BD; border-radius: 10px;
+  padding: .7rem 1rem; font-size: .85rem; color: #7A5C3A; margin-bottom: 1.5rem;
+}
+
+ul.archivio { list-style: none; }
+ul.archivio li { border-bottom: 1px dashed var(--line); padding: .8rem 0; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+ul.archivio .data { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .9rem; }
+
+footer.sito { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1.5rem 1.25rem; text-align: center; color: #a99f8c; font-size: .8rem; line-height: 1.7; }
+
+@media (max-width: 480px) {
+  .voce { padding: 1.1rem 1.1rem; }
+}
