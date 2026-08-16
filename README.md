@@ -33,60 +33,26 @@ I due giorni presenti (12–13 agosto 2026) sono **esempi dimostrativi** (`demo:
 - **Balthasar solo nella voce cattolica.** L'ortodosso commenta il **suo** lezionario.
 - Layer editoriale (`prompts/editor-checklist.md`): citazione verificata, rubrica completa, test dello specchio; se fallisce → rigenerare, non pubblicare.
 
-## Cron e generazione del giorno
+## Cron e generazione del giorno (ATTIVA)
 
-`vercel.json` chiama `GET /api/daily` ogni giorno alle 02:00 UTC (04:00 a Monaco d'estate). La route:
+`vercel.json` chiama `GET /api/daily` ogni giorno alle 02:00 UTC (04:00 a Monaco d'estate). La route (`maxDuration: 300`):
 
-1. legge i lezionari (Evangelizo / GOARCH; con `LEZIONARIO_MANUALE=1` o API giù → campi "DA INSERIRE" da compilare a mano);
-2. assembla i 5 prompt (system della voce + canone + pericope del giorno);
-3. **oggi**: scrive `content/DATA.md` con segnaposto; **domani** (vedi sotto): chiamerà il provider AI.
+1. legge i lezionari con testi integrali (Evangelizo per il cattolico; GOARCH/holytrinity + bible-api per il bizantino); se uno dei due non risponde → errore e nessuna pubblicazione (riprovare con `?data=`);
+2. genera le **4 voci in parallelo** con `claude-sonnet-5` (`lib/ai.js`), ognuna col proprio system prompt + canone + pericope con testo;
+3. **layer editoriale**: quinta chiamata con `prompts/editor-checklist.md` → verdetto `APPROVATA/RIGENERA` per voce (formato vincolante, parsato da `analizzaEditor`) + paragrafo "La logica del dono" firmato Marcus Bachmann; le voci respinte vengono rigenerate col motivo del rifiuto, **max 2 giri**, poi si pubblica con `nota_editoriale` nel frontmatter;
+4. **salvataggio**: in produzione commit di `content/DATA.md` su `main` via **GitHub API Contents** (`lib/github.js`, token `GITHUB_TOKEN`) → il push triggera il **redeploy automatico Vercel** e il giorno entra nel sito. In locale (senza `GITHUB_TOKEN`) scrive su disco.
 
-Protezione: imposta `CRON_SECRET` nelle env Vercel — il cron manda `Authorization: Bearer <CRON_SECRET>` automaticamente.
+Protezione: con `CRON_SECRET` impostato, `/api/daily` accetta solo `Authorization: Bearer <CRON_SECRET>` (il cron Vercel lo manda da solo).
 
-Test locale: `curl "http://localhost:3000/api/daily?data=2026-08-14"`.
+Test: locale `curl "http://localhost:3000/api/daily?data=2026-08-20"`; produzione `curl -H "Authorization: Bearer $CRON_SECRET" "https://gospel-dono.vercel.app/api/daily?data=2026-08-20"`.
 
-> **Limite noto (scelta MDX-nel-repo):** su Vercel il filesystem delle funzioni è di sola lettura, quindi in produzione `fs.writeFileSync` non persiste. Due strade quando si attiva la generazione: (a) far committare il file dal cron via GitHub API (commit su `main` → redeploy automatico), oppure (b) passare a Neon Postgres. In locale tutto funziona già così com'è.
-
-## Collegare la generazione AI (futuro)
-
-Nessuna chiamata LLM è presente nel codice, per scelta. Quando vorrai attivarla:
-
-```bash
-npm install @anthropic-ai/sdk        # chiedi conferma a te stesso: è una dipendenza nuova :)
-```
-
-In `lib/pipeline.js`, dentro `generaGiorno`, al posto dei segnaposto:
-
-```js
-import Anthropic from '@anthropic-ai/sdk';
-const client = new Anthropic(); // legge ANTHROPIC_API_KEY dalle env
-
-async function generaCommento(prompt) {
-  const msg = await client.messages.create({
-    model: 'claude-sonnet-5',
-    max_tokens: 2048,
-    system: prompt.system,          // system prompt della voce + canone
-    messages: [{ role: 'user', content: prompt.user }], // pericope + istruzione
-  });
-  return msg.content.find((b) => b.type === 'text')?.text ?? '';
-}
-
-// 1) quattro bozze, una per voce (i prompt sono già pronti da assemblaPrompt)
-const bozze = {};
-for (const voce of VOCI) bozze[voce] = await generaCommento(prompts[voce]);
-
-// 2) quinta chiamata: l'editor verifica la checklist e scrive "La logica del dono"
-const editor = await generaCommento(assemblaPromptEditor(bozze));
-// → se l'editor risponde RIGENERA per una voce: rigenera quella voce con il motivo
-//   nel messaggio user, poi ripassa dall'editor. Max 2 giri, poi pubblica con nota.
-```
+Env necessarie (vedi `.env.local.example`): `ANTHROPIC_API_KEY`, `GITHUB_TOKEN` (fine-grained PAT, solo repo gospel-dono, permesso Contents R/W), `CRON_SECRET`.
 
 Note tecniche:
-- Modello: `claude-sonnet-5` (ottimo per scrittura tono-sensibile; `claude-opus-5` se vorrai il massimo).
-- Niente `temperature`: sui modelli attuali non è supportata; la varietà la dà la pericope del giorno.
-- 5 chiamate/giorno ≈ pochi centesimi. `ANTHROPIC_API_KEY` va nelle env Vercel (mai nel repo).
-- L'output dell'editor decide: APPROVATA/RIGENERA per voce + paragrafo "La logica del dono" da mettere in testa al file.
+- Modello: `claude-sonnet-5`, 5 chiamate/giorno ≈ pochi centesimi. Niente `temperature` (non supportata sui modelli attuali).
+- `max_tokens` 6000 per voce (copre anche il pensiero adattivo del modello), 8000 per l'editor.
+- Perché il commit e non un DB: il contenuto resta MDX versionato nel repo (storia, diff, rollback), e Vercel ricostruisce il sito da solo a ogni push.
 
 ## Deploy (quando sarà il momento)
 
-Repo GitHub privato (`bifulcma`) → import su Vercel (`bifulcmas-projects`) → env: `CRON_SECRET`, in futuro `ANTHROPIC_API_KEY`. Il cron parte da solo dopo il primo deploy in produzione.
+Repo GitHub privato (`bifulcma`) → import su Vercel (`bifulcmas-projects`) → env: `ANTHROPIC_API_KEY`, `GITHUB_TOKEN`, `CRON_SECRET`. Il cron parte da solo dopo il primo deploy in produzione.
