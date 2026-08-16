@@ -19,7 +19,7 @@ const sans = Inter({
 export const metadata = {
   title: 'Il Vangelo del giorno come dono',
   description:
-    'Il Vangelo del giorno commentato da quattro voci — cattolica, ortodossa, protestante, dispensazionalista — sotto il segno della logica del dono.',
+    'Il Vangelo del giorno commentato da tre voci — cattolica, protestante, dispensazionalista — e dalla logica del dono di Marcus Bachmann.',
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           <div className="dentro">
             <span className="sigillo" aria-hidden="true">✦ ✠ ✦</span>
             <a href="/" className="logo">Il Vangelo come <em>dono</em></a>
-            <p className="motto">quattro voci, un solo criterio</p>
+            <p className="motto">tre voci, un solo criterio</p>
             <nav className="principale" aria-label="Navigazione principale">
               <a href="/">Oggi</a>
               <a href="/archivio">Archivio</a>

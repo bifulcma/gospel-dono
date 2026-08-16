@@ -170,8 +170,6 @@ details.brano[open] summary { color: var(--terracotta-scuro); margin-bottom: .45
 .voce.dono h2, .voce.dono .corpo > p:first-of-type::first-letter { color: var(--terracotta-scuro); }
 .voce.cattolica { border-left-color: var(--terracotta); }
 .voce.cattolica h2, .voce.cattolica .corpo > p:first-of-type::first-letter { color: var(--terracotta); }
-.voce.ortodossa { border-left-color: var(--porpora); }
-.voce.ortodossa h2, .voce.ortodossa .corpo > p:first-of-type::first-letter { color: var(--porpora); }
 .voce.protestante { border-left-color: var(--salvia); }
 .voce.protestante h2, .voce.protestante .corpo > p:first-of-type::first-letter { color: var(--salvia); }
 .voce.dispensazionalista { border-left-color: var(--bruno); }
