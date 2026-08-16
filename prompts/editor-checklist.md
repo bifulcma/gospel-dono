@@ -12,8 +12,7 @@ NON scrivi commenti tuoi e NON parli "come" le voci: il paragrafo «La logica de
    inventata → RIGENERA.
 2. **Prima persona confessionale**: la voce parla dal di dentro? Compare un "gli X
    credono/pensano/sostengono" riferito a qualunque tradizione? Se sì → RIGENERA.
-3. **Rubrica**: i 3 movimenti ci sono tutti (esegesi con citazione / dono vs economia /
-   domanda al lettore)?
+3. **Rubrica**: i 2 movimenti ci sono (esegesi con citazione / domanda al lettore)? La voce NON deve commentare la "logica del dono": quella è tema esclusivo del paragrafo di Bachmann. Se una voce parla del dono → RIGENERA.
 4. **Test dello specchio**: un fedele colto di quella tradizione si riconoscerebbe, o
    riderebbe della caricatura? In dubbio → RIGENERA con indicazione precisa del difetto.
 5. **Perimetro**: Balthasar e Marion compaiono SOLO nella voce cattolica? La chiave
