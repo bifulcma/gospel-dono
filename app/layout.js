@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
               <a href="/">Oggi</a>
               <a href="/archivio">Archivio</a>
               <a href="/rss.xml">RSS</a>
+              <a href="https://esichia.vercel.app" target="_blank" rel="noopener">Esichia ↗</a>
             </nav>
           </div>
         </header>
