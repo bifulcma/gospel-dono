@@ -38,7 +38,7 @@ I due giorni presenti (12–13 agosto 2026) sono **esempi dimostrativi** (`demo:
 `vercel.json` chiama `GET /api/daily` ogni giorno alle 02:00 UTC (04:00 a Monaco d'estate). La route (`maxDuration: 300`):
 
 1. legge i lezionari con testi integrali (Evangelizo per il cattolico; GOARCH/holytrinity + bible-api per il bizantino); se uno dei due non risponde → errore e nessuna pubblicazione (riprovare con `?data=`);
-2. genera le **4 voci in parallelo** con `claude-sonnet-5` (`lib/ai.js`), ognuna col proprio system prompt + canone + pericope con testo;
+2. genera le **4 voci in parallelo** con `deepseek-v4-pro` su Ollama cloud (`lib/ai.js`, endpoint OpenAI-compatible), ognuna col proprio system prompt + canone + pericope con testo;
 3. **layer editoriale**: quinta chiamata con `prompts/editor-checklist.md` → verdetto `APPROVATA/RIGENERA` per voce (formato vincolante, parsato da `analizzaEditor`) + paragrafo "La logica del dono" firmato Marcus Bachmann; le voci respinte vengono rigenerate col motivo del rifiuto, **max 2 giri**, poi si pubblica con `nota_editoriale` nel frontmatter;
 4. **salvataggio**: in produzione commit di `content/DATA.md` su `main` via **GitHub API Contents** (`lib/github.js`, token `GITHUB_TOKEN`) → il push triggera il **redeploy automatico Vercel** e il giorno entra nel sito. In locale (senza `GITHUB_TOKEN`) scrive su disco.
 
@@ -46,13 +46,13 @@ Protezione: con `CRON_SECRET` impostato, `/api/daily` accetta solo `Authorizatio
 
 Test: locale `curl "http://localhost:3000/api/daily?data=2026-08-20"`; produzione `curl -H "Authorization: Bearer $CRON_SECRET" "https://gospel-dono.vercel.app/api/daily?data=2026-08-20"`.
 
-Env necessarie (vedi `.env.local.example`): `ANTHROPIC_API_KEY`, `GITHUB_TOKEN` (fine-grained PAT, solo repo gospel-dono, permesso Contents R/W), `CRON_SECRET`.
+Env necessarie (vedi `.env.local.example`): `OLLAMA_API_KEY`, `GITHUB_TOKEN` (fine-grained PAT, solo repo gospel-dono, permesso Contents R/W), `CRON_SECRET`.
 
 Note tecniche:
-- Modello: `claude-sonnet-5`, 5 chiamate/giorno ≈ pochi centesimi. Niente `temperature` (non supportata sui modelli attuali).
-- `max_tokens` 6000 per voce (copre anche il pensiero adattivo del modello), 8000 per l'editor.
+- Provider: Ollama cloud, modello `deepseek-v4-pro`, 5 chiamate/giorno. Niente `temperature`. Nessun SDK: `fetch` nativo verso `https://ollama.com/v1/chat/completions`.
+- `max_tokens` 6000 per voce, 8000 per l'editor; timeout 3 min per chiamata (route `maxDuration: 300`).
 - Perché il commit e non un DB: il contenuto resta MDX versionato nel repo (storia, diff, rollback), e Vercel ricostruisce il sito da solo a ogni push.
 
 ## Deploy (quando sarà il momento)
 
-Repo GitHub privato (`bifulcma`) → import su Vercel (`bifulcmas-projects`) → env: `ANTHROPIC_API_KEY`, `GITHUB_TOKEN`, `CRON_SECRET`. Il cron parte da solo dopo il primo deploy in produzione.
+Repo GitHub privato (`bifulcma`) → import su Vercel (`bifulcmas-projects`) → env: `OLLAMA_API_KEY`, `GITHUB_TOKEN`, `CRON_SECRET`. Il cron parte da solo dopo il primo deploy in produzione.
