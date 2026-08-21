@@ -75,23 +75,21 @@ punto di tangenza; grazia che non fa i conti prima del tempo.
 
 ---
 
-# Canone — Marcus Bachmann, *La dialettica occultata* (Overture) + *L'Illusione della Salvezza Tecnologica* + confronto Ratzinger/Bonaventura
+# Canone — Marcus Bachmann: *La dialettica occultata* (Overture) + *L'Illusione della Salvezza Tecnologica* (il dono)
 
-Fonti ulteriori citabili del paragrafo quotidiano, accanto a *La logica del dono*:
-- **«La dialettica occultata»** — l'Overture della trilogia (PDF su marcus-bachmann), che
-  apre la partita: la tesi bocciata del giovane Ratzinger (Monaco 1955), la rivelazione
-  come atto nella storia, e il confronto con Hegel che non si può evitare. Si cita come
-  «La dialettica occultata» con sezione.
-- **L'Illusione della Salvezza Tecnologica** — il secondo libro della trilogia. Si cita
-  con titolo e sezione.
-- Il confronto **Ratzinger/Bonaventura** (dal manoscritto della tesi e dal saggio di
-  confronto, in preparazione): in voce si cita come «il mio confronto con Ratzinger»,
-  non come opera pubblicata.
+Due fonti ulteriori citabili del paragrafo quotidiano, accanto a *La logica del dono*:
+- **«La dialettica occultata»** — l'Overture della trilogia (PDF su marcus-bachmann): il
+  canone su Ratzinger. La tesi bocciata di Monaco 1955, la rivelazione come atto nella
+  storia, il confronto con Hegel che non si può evitare. Si cita come «La dialettica
+  occultata» con sezione.
+- **L'Illusione della Salvezza Tecnologica** — il libro del dono, il rovescio della
+  medaglia: che cosa accade quando la dialettica resta *senza* dono. Si cita con titolo e
+  sezione.
 
-Quando il brano del giorno tocca creazione/materia/spirito, salvezza, escatologia,
-gnosi, tecnologia o il rapporto verità/storia, si può citare da queste fonti. Restano
-l'unico riferimento congiunto di Bachmann oltre a *La logica del dono*: citare sempre
-con titolo e sezione, mai a memoria.
+Quando il brano del giorno tocca creazione/materia/spirito, salvezza, escatologia, gnosi,
+tecnologia o il rapporto verità/storia, si può citare da queste due fonti. Restano
+l'unico riferimento congiunto di Bachmann oltre a *La logica del dono*: citare sempre con
+titolo e sezione, mai a memoria.
 
 ## La dialettica occultata (Overture)
 Nel settembre 1955 il giovane Ratzinger deposita a Monaco la tesi su Bonaventura: pensa
@@ -153,18 +151,6 @@ La forza che «trattiene» l'Anticristo senza impedirlo. La Chiesa è il *Katech
 incarnato: non mira a invertire il corso della storia, ma a preservare la salvezza
 delle anime nell'ordine trinitario (il Padre crea, il Figlio redime, lo Spirito
 vivifica). Una trascendenza che non è fuga dal mondo, ma sua santificazione.
-
-## Rivelazione come evento storico — confronto Ratzinger/Bonaventura
-Ratzinger scopre che Bonaventura non ha un concetto moderno di «rivelazione»: il
-contenuto si distribuisce tra *revelatio, manifestatio, doctrina, fides*. La rivelazione
-è *Selbsterschließung Gottes* — auto-svelamento di Dio in un cammino di azione storica
-(Heilsgeschichte), con un *Tatcharakter* (carattere di atto della verità). La storia
-non è accidentale rispetto alla verità eterna: ha peso teologico. Bachmann legge in
-questa apertura lo spazio per la dialettica, ma constata che Ratzinger/Bonaventura la
-frenano: Francesco apre il «settimo tempo» sempre *dentro* il sesto (del Figlio), lo
-Spirito non supera il Figlio ma lo porta a compimento. Per Bachmann è una *Aufhebung*
-moderata — rispettabile ma insufficiente — che non arriva alla kenosi radicale dell'Io
-eckhartiana: il soggetto è «attualizzato» ma non «svuotato».
 
 ## Gioacchino da Fiore: lo schema trinitario della storia
 Tre età trinitarie (Padre-Legge, Figlio-Chiesa, Spirito-imminente). Bonaventura recepisce
