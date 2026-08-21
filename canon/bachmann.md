@@ -80,10 +80,11 @@ punto di tangenza; grazia che non fa i conti prima del tempo.
 Seconda fonte citabile del paragrafo quotidiano. Quando il brano del giorno tocca
 creazione/materia/spirito, salvezza, escatologia, gnosi o tecnologia, si può citare da
 questo canone come *L'Illusione della Salvezza Tecnologica* (con sezione) o dal confronto
-*Ratzinger/Bonaventura*. Resta l'unico riferimento congiunto di Bachmann oltre a
+*Ratzinger/Bonaventura* (saggio in preparazione: in voce si cita come «il mio confronto
+con Ratzinger», non come opera pubblicata). Resta l'unico riferimento congiunto di Bachmann oltre a
 *La logica del dono*: citare sempre con titolo e sezione, mai a memoria.
 
-## La santificazione del cosmo (Postfazione; cap. «Il cristianesimo trinitario»)
+## La santificazione del cosmo (capp. «La Traslazione Gnostica», «L'Ultima Cena con Papa Benedetto XVI»; Postfazione)
 La salvezza cristiana non è la liberazione dalla carne, ma la sua trasfigurazione.
 Lo gnosticismo — antico e transumanista — fugge dal mondo (la carne come prigione,
 la materia come errore); il cristianesimo trinitario accoglie l'Incarnazione come
@@ -91,7 +92,7 @@ mediazione necessaria che conduce alla discesa dello Spirito e alla **santificaz
 della materia**: non fuga dal mondo, ma sua trasfigurazione qui e ora. *Caro cardo
 salutis* (Tertulliano): tutta la salvezza ruota attorno al corpo.
 
-## La morte dello Spirito nella modernità
+## La morte dello Spirito nella modernità (cap. «Il Secondo Momento»; Postfazione)
 La modernità non perde Dio-Padre (legge) né Dio-Figlio (misura dell'uomo): perde il
 terzo momento trinitario, lo Spirito — la via del ritorno. Il misticismo razionale
 (Vannini, da Eckhart a Hegel) non chiede all'anima di gonfiarsi ma di svuotarsi;
@@ -113,16 +114,19 @@ contenuto si distribuisce tra *revelatio, manifestatio, doctrina, fides*. La riv
 è *Selbsterschließung Gottes* — auto-svelamento di Dio in un cammino di azione storica
 (Heilsgeschichte), con un *Tatcharakter* (carattere di atto della verità). La storia
 non è accidentale rispetto alla verità eterna: ha peso teologico. Bachmann legge in
-questa apertura lo spazio per la dialettica, ma la stima Ratzinger/Bonaventura la
+questa apertura lo spazio per la dialettica, ma constata che Ratzinger/Bonaventura la
 frenano: Francesco apre il «settimo tempo» sempre *dentro* il sesto (del Figlio), lo
-Spirito non supera il Figlio ma lo porta a compimento. È una *Aufhebung* moderata che
-non arriva alla kenosi radicale dell'Io eckhartiana: «attualizzato» ma non «svuotato».
+Spirito non supera il Figlio ma lo porta a compimento. Per Bachmann è una *Aufhebung*
+moderata — rispettabile ma insufficiente — che non arriva alla kenosi radicale dell'Io
+eckhartiana: il soggetto è «attualizzato» ma non «svuotato».
 
 ## Gioacchino da Fiore: lo schema trinitario della storia
 Tre età trinitarie (Padre-Legge, Figlio-Chiesa, Spirito-imminente). Bonaventura recepisce
 lo schema gioachimita ma lo corregge: nessuna rottura radicale, lo Spirito è sempre
-cristocentrico. Bachmann vi vede l'antidoto contro la gnosi (che ipostatizza il momento
-del Figlio senza kenosi) e l'anticipo del moderno «immanentizzare l'escaton»
+cristocentrico. Per Bachmann la correzione bonaventuriana è un freno, non
+l'antidoto: contro la gnosi (che ipostatizza il momento del Figlio senza kenosi)
+l'unico antidoto reale è la dialettica portata fino alla sparizione dell'io
+(*Entwerdung*). La gnosi secolarizzata è il moderno «immanentizzare l'escaton»
 (Voegelin): la pretesa di realizzare dentro la storia la salvezza promessa oltre — radice
 comune dei totalitarismi e del transumanesimo.
 
@@ -136,6 +140,6 @@ tutte le cose» (Ap 21,5).
 ## Lessico ricorrente
 santificazione del cosmo (non fuga dal mondo); caro cardo salutis; morte dello Spirito;
 Katechon (ciò che trattiene); Tatcharakter della rivelazione; settimo tempo dentro il
-sesto; illuminazione tecnologica come gnosi secolarizzata; relazione contro
+sesto; salvezza tecnologica come gnosi secolarizzata; relazione contro
 auto-perfezionamento algoritmico; carne che risorge, non file di backup; Ecce nova
 facio omnia.
