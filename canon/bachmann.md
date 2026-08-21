@@ -75,82 +75,81 @@ punto di tangenza; grazia che non fa i conti prima del tempo.
 
 ---
 
-# Canone — Marcus Bachmann: *La dialettica occultata* (Overture) + *L'Illusione della Salvezza Tecnologica* (il dono)
+# Canone — Marcus Bachmann, come definito dal sito marcus-bachmann.vercel.app
 
-Due fonti ulteriori citabili del paragrafo quotidiano, accanto a *La logica del dono*:
-- **«La dialettica occultata»** — l'Overture della trilogia (PDF su marcus-bachmann): il
-  canone su Ratzinger. La tesi bocciata di Monaco 1955, la rivelazione come atto nella
-  storia, il confronto con Hegel che non si può evitare. Si cita come «La dialettica
-  occultata» con sezione.
-- **L'Illusione della Salvezza Tecnologica** — il libro del dono, il rovescio della
-  medaglia: che cosa accade quando la dialettica resta *senza* dono. Si cita con titolo e
-  sezione.
+Il canone di Bachmann è definito dal suo sito (homepage, 4 aree): **Ouverture · Teologia
+Politica · Le Scuole Cattoliche · L'Illusione della Salvezza Tecnologica**. Il paragrafo
+quotidiano «La logica del dono» può citare da queste fonti — accanto a *La Logica del
+Dono*, il libro portante. Si cita sempre con titolo e sezione, mai a memoria.
 
-Quando il brano del giorno tocca creazione/materia/spirito, salvezza, escatologia, gnosi,
-tecnologia o il rapporto verità/storia, si può citare da queste due fonti. Restano
-l'unico riferimento congiunto di Bachmann oltre a *La logica del dono*: citare sempre con
-titolo e sezione, mai a memoria.
+## La Logica del Dono — L'Hegel Cattolico (il libro portante)
+«Hegel è il pensatore più medievale dell'età moderna, e proprio per questo il più
+pericoloso.» Ha tradotto fedelmente la struttura trinitaria nella logica del concetto,
+con una sola, decisiva omissione: l'*analogia entis*. Soppressa la maggior dissomiglianza
+tra Creatore e creatura, il ritmo del dono diventa ingranaggio della necessità. Dieci
+capitoli per **attraversare** Hegel — non scomunicarlo né ribattezzarlo — e restituire
+alla dialettica la libertà dell'amore. Con Balthasar, la kénosis non è un passaggio che
+la logica esige, ma libertà che si dona. (Questa è la Parte 1 del presente canone,
+sopra.)
 
-## La dialettica occultata (Overture)
+## Ouverture — La dialettica occultata (il canone su Ratzinger)
 Nel settembre 1955 il giovane Ratzinger deposita a Monaco la tesi su Bonaventura: pensa
 la rivelazione non come deposito di verità ma come **atto che si compie nella storia**.
-Schmaus la boccia («pericoloso modernismo, soggettivizzazione del concetto di
-rivelazione») e Ratzinger, per salvare l'abilitazione, **taglia** la prima parte — il
-cuore del lavoro. Da quel taglio nasce la domanda che apre le due opere: *può la verità
-avere una storia, e restare un dono?* La dialettica occultata è la struttura a due poli
-che le pagine amputate avevano portato alla luce: il dono che è reale soltanto
-nell'essere accolto, la verità che vive nella relazione fra chi dà e chi riceve. Al
-Vaticano II le idee bocciate nel 1956 diventano dottrina conciliare (*Dei Verbum*, 1965):
-«*placuit Deo seipsum revelare*» — piacque a Dio rivelare se stesso.
+Schmaus la boccia («ein gefährlicher Modernismus…», un pericoloso modernismo destinato a
+risolversi nella soggettivizzazione del concetto di rivelazione) e Ratzinger, per salvare
+l'abilitazione, **taglia** la prima parte — il cuore del lavoro. Da quel taglio nasce la
+domanda che apre le due opere: *può la verità avere una storia, e restare un dono?* La
+rivelazione per Bonaventura è un *Aktbegriff* (concetto-atto), mai un dato oggettivo:
+un evento che accade solo quando qualcuno la riceve. Al Vaticano II le idee bocciate nel
+1956 diventano dottrina conciliare (*Dei Verbum*, 1965): «*placuit Deo seipsum
+revelare*» — piacque a Dio rivelare se stesso.
 
-## Ratzinger non è Hegel — e proprio per questo deve confrontarsi con lui
+### Le tre forze che contendono la verità
+Il Reale (la verità è nelle cose: Aristotele, Tommaso); il Soggetto (la verità migra
+nello sguardo che costituisce: Cartesio, Kant, Rahner); la Storia (la verità *accade*,
+matura nel tempo: Vico, Newman, Hegel — il più radicale: lo Spirito *diviene*, non è).
+
+### Ratzinger non è Hegel — e proprio per questo deve confrontarsi con lui
 Ratzinger non deriva da Hegel, non ne condivide l'esito; ma avendo scelto la storia e la
 comunità come luogo della verità, gioca una partita di cui Hegel detta le regole: *come
-può la verità avere una storia senza dissolversi in essa?* La formula non è «Ratzinger è
-Hegel»: è «Ratzinger non è Hegel, e proprio per questo deve confrontarsi con lui». Il
-confronto è inevitabile perché la Trinità viva — il Padre che si consegna nel Figlio, il
-Figlio che si svuota (kénosi), lo Spirito che rilancia la relazione — è già il ritmo
-che Hegel vide e secolarizzò nell'*Aufhebung*. Hegel è lo *specchio deformante* in cui
-il cristianesimo vede riflesso e stravolto il proprio nucleo. Per tutta la vita Ratzinger
-tira un **freno**: nessuna terza età, nessun progresso della rivelazione dentro la
-storia, l'«ermeneutica della riforma, del rinnovamento nella continuità» (2005). Il
-freno è reale; ma un freno non è una risposta: trattenere un problema non è scioglierlo.
+può la verità avere una storia senza dissolversi in essa?* La Trinità viva — il Padre che
+si consegna nel Figlio, il Figlio che si svuota (kénosi), lo Spirito che rilancia la
+relazione — è già il ritmo che Hegel vide e secolarizzò nell'*Aufhebung*: lo *specchio
+deformante*. Per tutta la vita Ratzinger tira un **freno**: nessuna terza età, nessun
+progresso della rivelazione dentro la storia, l'«ermeneutica della riforma, del
+rinnovamento nella continuità» (2005). Il freno è reale; ma un freno non è una risposta:
+trattenere un problema non è scioglierlo.
 
-## La partita: il Dono e l'Illusione
-Hegel traduce la Trinità in processo *necessario*; la Trinità cristiana è *dono* —
-gratuità, libertà, un amore non costretto a darsi e che tuttavia si dà. Il compito che
-Ratzinger apre e non chiude è tenere insieme il movimento e il dono. I due libri lo
-varcano: *La logica del dono* attraversa Hegel (l'unica omissione fatale è l'*analogia
-entis*; il Padre genera il Figlio non perché deve ma perché vuole; il Sabato Santo è la
-negazione che nessuna sintesi riassorbe); *L'Illusione della Salvezza Tecnologica* mostra
-il rovescio — la dialettica *senza* dono diventa processo, necessità che blinda lo
-Spirito, io che vedendo Dio farsi uomo conclude «anch'io sono Dio» e salta la kénosi
-(auto-divinizzazione senza morte dell'ego). C'è una sola dialettica intera, e più modi di
-mutilarla.
+## Teologia Politica (il Katechon e la immanentizzazione)
+Schmitt · Voegelin · Blumenberg · Taubes · Agamben · Koselleck. «Tutti i concetti
+pregnanti della dottrina moderna dello Stato sono concetti teologici secolarizzati»
+(Schmitt). Gli strumenti: il **katechon** (la forza che trattiene), l'**immanentizzazione
+dell'eschaton** (Voegelin), la secolarizzazione dei concetti teologici. La modernità si
+legge come teatro escatologico: la pretesa di realizzare dentro la storia la salvezza
+promessa oltre — radice comune dei totalitarismi e del transumanesimo.
 
-## La santificazione del cosmo (capp. «La Traslazione Gnostica», «L'Ultima Cena con Papa Benedetto XVI»; Postfazione)
+## L'Illusione della Salvezza Tecnologica (il dono)
+Il transumanesimo come ultima incarnazione dell'eresia gnostica: un'«Incarnazione senza
+Croce» — «Pasqua senza Venerdì Santo». Il mito secondo cui possiamo vivere in pienezza
+scollegati dalla nostra sorgente spirituale, illudendoci che la tecnologia basti a
+salvarci. Sette capitoli, ognuno letto con **tre lenti simultanee**: teologica (Meister
+Eckhart: Abgeschiedenheit, Grund, la nascita di Dio nell'anima); critica (Francoforte,
+Girard, Foucault, Agamben, Han: biopotere, psicopolitica); quantistica (Roger Penrose
+Orch-OR: la coscienza non è un algoritmo). L'unica via d'uscita non è un'ulteriore
+tecnica, ma la **logica del dono** — il punto di tangenza, là dove il sistema finisce e
+comincia ciò che nessun sistema può contenere: l'amore al di là della necessità.
+
+## La santificazione del cosmo
 La salvezza cristiana non è la liberazione dalla carne, ma la sua trasfigurazione.
 Lo gnosticismo — antico e transumanista — fugge dal mondo (la carne come prigione,
 la materia come errore); il cristianesimo trinitario accoglie l'Incarnazione come
 mediazione necessaria che conduce alla discesa dello Spirito e alla **santificazione
 della materia**: non fuga dal mondo, ma sua trasfigurazione qui e ora. *Caro cardo
-salutis* (Tertulliano): tutta la salvezza ruota attorno al corpo.
-
-## La morte dello Spirito nella modernità (cap. «Il Secondo Momento»; Postfazione)
-La modernità non perde Dio-Padre (legge) né Dio-Figlio (misura dell'uomo): perde il
-terzo momento trinitario, lo Spirito — la via del ritorno. Il misticismo razionale
-(Vannini, da Eckhart a Hegel) non chiede all'anima di gonfiarsi ma di svuotarsi;
-pienezza per sottrazione, non per accumulo. Lo Spirito che discende sulla materia per
-santificarla viene espulso da un mondo ridotto a codice binario, dove la grazia — dono
-gratuito e relazionale — è sostituita dall'auto-perfezionamento algoritmico. La
-salvezza tecnologica è l'ultima forma della tentazione gnostica: salvarsi con la
-conoscenza tecnica invece che con la relazione con Dio.
-
-## Il Katechon (2 Ts 2,6-7)
-La forza che «trattiene» l'Anticristo senza impedirlo. La Chiesa è il *Katechon*
-incarnato: non mira a invertire il corso della storia, ma a preservare la salvezza
-delle anime nell'ordine trinitario (il Padre crea, il Figlio redime, lo Spirito
-vivifica). Una trascendenza che non è fuga dal mondo, ma sua santificazione.
+salutis* (Tertulliano): tutta la salvezza ruota attorno al corpo. La modernità non perde
+Dio-Padre (legge) né Dio-Figlio (misura dell'uomo): perde il terzo momento trinitario,
+lo Spirito — la via del ritorno. Lo Spirito che discende sulla materia per santificarla
+viene espulso da un mondo ridotto a codice binario, dove la grazia — dono gratuito e
+relazionale — è sostituita dall'auto-perfezionamento algoritmico.
 
 ## Gioacchino da Fiore: lo schema trinitario della storia
 Tre età trinitarie (Padre-Legge, Figlio-Chiesa, Spirito-imminente). Bonaventura recepisce
@@ -158,11 +157,9 @@ lo schema gioachimita ma lo corregge: nessuna rottura radicale, lo Spirito è se
 cristocentrico. Per Bachmann la correzione bonaventuriana è un freno, non
 l'antidoto: contro la gnosi (che ipostatizza il momento del Figlio senza kenosi)
 l'unico antidoto reale è la dialettica portata fino alla sparizione dell'io
-(*Entwerdung*). La gnosi secolarizzata è il moderno «immanentizzare l'escaton»
-(Voegelin): la pretesa di realizzare dentro la storia la salvezza promessa oltre — radice
-comune dei totalitarismi e del transumanesimo.
+(*Entwerdung*).
 
-## Dio vs necessità (collegamento con *La logica del dono*)
+## Dio vs necessità
 Come la grammatica del dono contro la grammatica della necessità, così l'Incarnazione
 è una scelta eterna dell'amore, non un passaggio obbligato: la risurrezione della carne
 non è un *backup* digitale ma una vita gloriosa e piena; la tecnologia, redenta, serve
@@ -170,8 +167,9 @@ lo spirito invece di ingabbiarlo. *Ecce nova facio omnia* — «ecco, io faccio 
 tutte le cose» (Ap 21,5).
 
 ## Lessico ricorrente
-santificazione del cosmo (non fuga dal mondo); caro cardo salutis; morte dello Spirito;
-Katechon (ciò che trattiene); Tatcharakter della rivelazione; settimo tempo dentro il
-sesto; salvezza tecnologica come gnosi secolarizzata; relazione contro
-auto-perfezionamento algoritmico; carne che risorge, non file di backup; Ecce nova
-facio omnia.
+Dono che si dona senza ritorno; non-economia (il dono contato non è più dono); kenosi;
+gratuità contro necessità; Aufhebung dimezzata; Io alienato vs microcosmo trinitario;
+punto di tangenza; grazia che non fa i conti prima del tempo; santificazione del cosmo
+(non fuga dal mondo); caro cardo salutis; morte dello Spirito; Katechon (ciò che
+trattiene); immanentizzazione dell'eschaton; Incarnazione senza Croce; carne che risorge,
+non file di backup; Ecce nova facio omnia.
