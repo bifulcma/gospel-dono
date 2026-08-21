@@ -72,3 +72,70 @@ accende dell'amore, e la dialettica diventa preghiera.
 Dono che si dona senza ritorno; non-economia (il dono contato non è più dono); kenosi;
 gratuità contro necessità; Aufhebung dimezzata; Io alienato vs microcosmo trinitario;
 punto di tangenza; grazia che non fa i conti prima del tempo.
+
+---
+
+# Canone — Marcus Bachmann, *L'Illusione della Salvezza Tecnologica* + confronto Ratzinger/Bonaventura
+
+Seconda fonte citabile del paragrafo quotidiano. Quando il brano del giorno tocca
+creazione/materia/spirito, salvezza, escatologia, gnosi o tecnologia, si può citare da
+questo canone come *L'Illusione della Salvezza Tecnologica* (con sezione) o dal confronto
+*Ratzinger/Bonaventura*. Resta l'unico riferimento congiunto di Bachmann oltre a
+*La logica del dono*: citare sempre con titolo e sezione, mai a memoria.
+
+## La santificazione del cosmo (Postfazione; cap. «Il cristianesimo trinitario»)
+La salvezza cristiana non è la liberazione dalla carne, ma la sua trasfigurazione.
+Lo gnosticismo — antico e transumanista — fugge dal mondo (la carne come prigione,
+la materia come errore); il cristianesimo trinitario accoglie l'Incarnazione come
+mediazione necessaria che conduce alla discesa dello Spirito e alla **santificazione
+della materia**: non fuga dal mondo, ma sua trasfigurazione qui e ora. *Caro cardo
+salutis* (Tertulliano): tutta la salvezza ruota attorno al corpo.
+
+## La morte dello Spirito nella modernità
+La modernità non perde Dio-Padre (legge) né Dio-Figlio (misura dell'uomo): perde il
+terzo momento trinitario, lo Spirito — la via del ritorno. Il misticismo razionale
+(Vannini, da Eckhart a Hegel) non chiede all'anima di gonfiarsi ma di svuotarsi;
+pienezza per sottrazione, non per accumulo. Lo Spirito che discende sulla materia per
+santificarla viene espulso da un mondo ridotto a codice binario, dove la grazia — dono
+gratuito e relazionale — è sostituita dall'auto-perfezionamento algoritmico. La
+salvezza tecnologica è l'ultima forma della tentazione gnostica: salvarsi con la
+conoscenza tecnica invece che con la relazione con Dio.
+
+## Il Katechon (2 Ts 2,6-7)
+La forza che «trattiene» l'Anticristo senza impedirlo. La Chiesa è il *Katechon*
+incarnato: non mira a invertire il corso della storia, ma a preservare la salvezza
+delle anime nell'ordine trinitario (il Padre crea, il Figlio redime, lo Spirito
+vivifica). Una trascendenza che non è fuga dal mondo, ma sua santificazione.
+
+## Rivelazione come evento storico — confronto Ratzinger/Bonaventura
+Ratzinger scopre che Bonaventura non ha un concetto moderno di «rivelazione»: il
+contenuto si distribuisce tra *revelatio, manifestatio, doctrina, fides*. La rivelazione
+è *Selbsterschließung Gottes* — auto-svelamento di Dio in un cammino di azione storica
+(Heilsgeschichte), con un *Tatcharakter* (carattere di atto della verità). La storia
+non è accidentale rispetto alla verità eterna: ha peso teologico. Bachmann legge in
+questa apertura lo spazio per la dialettica, ma la stima Ratzinger/Bonaventura la
+frenano: Francesco apre il «settimo tempo» sempre *dentro* il sesto (del Figlio), lo
+Spirito non supera il Figlio ma lo porta a compimento. È una *Aufhebung* moderata che
+non arriva alla kenosi radicale dell'Io eckhartiana: «attualizzato» ma non «svuotato».
+
+## Gioacchino da Fiore: lo schema trinitario della storia
+Tre età trinitarie (Padre-Legge, Figlio-Chiesa, Spirito-imminente). Bonaventura recepisce
+lo schema gioachimita ma lo corregge: nessuna rottura radicale, lo Spirito è sempre
+cristocentrico. Bachmann vi vede l'antidoto contro la gnosi (che ipostatizza il momento
+del Figlio senza kenosi) e l'anticipo del moderno «immanentizzare l'escaton»
+(Voegelin): la pretesa di realizzare dentro la storia la salvezza promessa oltre — radice
+comune dei totalitarismi e del transumanesimo.
+
+## Dio vs necessità (collegamento con *La logica del dono*)
+Come la grammatica del dono contro la grammatica della necessità, così l'Incarnazione
+è una scelta eterna dell'amore, non un passaggio obbligato: la risurrezione della carne
+non è un *backup* digitale ma una vita gloriosa e piena; la tecnologia, redenta, serve
+lo spirito invece di ingabbiarlo. *Ecce nova facio omnia* — «ecco, io faccio nuove
+tutte le cose» (Ap 21,5).
+
+## Lessico ricorrente
+santificazione del cosmo (non fuga dal mondo); caro cardo salutis; morte dello Spirito;
+Katechon (ciò che trattiene); Tatcharakter della rivelazione; settimo tempo dentro il
+sesto; illuminazione tecnologica come gnosi secolarizzata; relazione contro
+auto-perfezionamento algoritmico; carne che risorge, non file di backup; Ecce nova
+facio omnia.
