@@ -1,8 +1,9 @@
 # Canone — Marcus Bachmann, *La logica del dono*
 
 Estratto dei concetti chiave del pensiero di Bachmann sul dono, tratti dal suo libro
-*La logica del dono* (otto capitoli più introduzione e conclusione). È l'unica fonte
-citabile del paragrafo quotidiano: si cita come "La logica del dono" con capitolo/sezione.
+*La logica del dono* (dieci capitoli: otto più introduzione e conclusione). È la fonte
+principale del paragrafo quotidiano; le altre fonti citabili sono nella Parte 2 (dal
+sito ufficiale). Si cita come "La logica del dono" con capitolo/sezione.
 
 ## La tesi centrale (Introduzione; Conclusione, «La tesi, raccolta»)
 Hegel ha tradotto fedelmente la struttura logica della Trinità — nessuno nella modernità
@@ -77,12 +78,14 @@ punto di tangenza; grazia che non fa i conti prima del tempo.
 
 # Canone — Marcus Bachmann, come definito dal sito marcus-bachmann.vercel.app
 
-Il canone di Bachmann è definito dal suo sito (homepage, 4 aree): **Ouverture · Teologia
-Politica · Le Scuole Cattoliche · L'Illusione della Salvezza Tecnologica**. Il paragrafo
+Il canone di Bachmann è definito dal suo sito (4 aree della homepage): **Ouverture ·
+La Logica del Dono · Teologia Politica / L'Illusione della Salvezza Tecnologica ·
+Esercizi**. (La pagina «Teologia Politica» del sito presenta *L'Illusione della Salvezza
+Tecnologica*; un'area «Le Scuole Cattoliche» non esiste sul sito.) Il paragrafo
 quotidiano «La logica del dono» può citare da queste fonti — accanto a *La Logica del
 Dono*, il libro portante. Si cita sempre con titolo e sezione, mai a memoria.
 
-## La Logica del Dono — L'Hegel Cattolico (il libro portante)
+## La Logica del Dono — Attraversare Hegel (il libro portante)
 «Hegel è il pensatore più medievale dell'età moderna, e proprio per questo il più
 pericoloso.» Ha tradotto fedelmente la struttura trinitaria nella logica del concetto,
 con una sola, decisiva omissione: l'*analogia entis*. Soppressa la maggior dissomiglianza
@@ -120,26 +123,27 @@ progresso della rivelazione dentro la storia, l'«ermeneutica della riforma, del
 rinnovamento nella continuità» (2005). Il freno è reale; ma un freno non è una risposta:
 trattenere un problema non è scioglierlo.
 
-## Teologia Politica (il Katechon e la immanentizzazione)
-Schmitt · Voegelin · Blumenberg · Taubes · Agamben · Koselleck. «Tutti i concetti
-pregnanti della dottrina moderna dello Stato sono concetti teologici secolarizzati»
-(Schmitt). Gli strumenti: il **katechon** (la forza che trattiene), l'**immanentizzazione
-dell'eschaton** (Voegelin), la secolarizzazione dei concetti teologici. La modernità si
-legge come teatro escatologico: la pretesa di realizzare dentro la storia la salvezza
-promessa oltre — radice comune dei totalitarismi e del transumanesimo.
+## Teologia Politica (il Katechon e l'immanentizzazione)
+Prima area tematica de *L'Illusione della Salvezza Tecnologica*: Schmitt e Voegelin.
+Gli strumenti: il **katechon** («ciò che trattiene»), l'**immanentizzazione
+dell'escaton** (Voegelin), la secolarizzazione dei concetti teologici moderni dello
+Stato (Schmitt). La modernità si legge come teatro escatologico: la pretesa di
+realizzare dentro la storia la salvezza promessa oltre — radice comune dei
+totalitarismi e del transumanesimo.
 
 ## L'Illusione della Salvezza Tecnologica (il dono)
 Il transumanesimo come ultima incarnazione dell'eresia gnostica: un'«Incarnazione senza
 Croce» — «Pasqua senza Venerdì Santo». Il mito secondo cui possiamo vivere in pienezza
 scollegati dalla nostra sorgente spirituale, illudendoci che la tecnologia basti a
-salvarci. Sette capitoli, ognuno letto con **tre lenti simultanee**: teologica (Meister
-Eckhart: Abgeschiedenheit, Grund, la nascita di Dio nell'anima); critica (Francoforte,
-Girard, Foucault, Agamben, Han: biopotere, psicopolitica); quantistica (Roger Penrose
-Orch-OR: la coscienza non è un algoritmo). L'unica via d'uscita non è un'ulteriore
+salvarci. Sei capitoli, **tre aree tematiche**: teologia politica (Schmitt, Voegelin:
+katechon ed escaton); genealogia gnostica (Ireneo di Lione, Weber, Harari — da
+al-Hallaj ed Eckhart, il *Grund* e la nascita di Dio nell'anima, fino alla «gabbia
+d'acciaio» e a *Homo Deus*); teoria della coscienza (Penrose e Hameroff, Orch-OR: la
+coscienza non è un algoritmo). L'unica via d'uscita non è un'ulteriore
 tecnica, ma la **logica del dono** — il punto di tangenza, là dove il sistema finisce e
 comincia ciò che nessun sistema può contenere: l'amore al di là della necessità.
 
-## La santificazione del cosmo
+## La santificazione del cosmo (Illusione: «La Traslazione Gnostica», «L'Ultima Cena», Postfazione)
 La salvezza cristiana non è la liberazione dalla carne, ma la sua trasfigurazione.
 Lo gnosticismo — antico e transumanista — fugge dal mondo (la carne come prigione,
 la materia come errore); il cristianesimo trinitario accoglie l'Incarnazione come
@@ -151,7 +155,7 @@ lo Spirito — la via del ritorno. Lo Spirito che discende sulla materia per san
 viene espulso da un mondo ridotto a codice binario, dove la grazia — dono gratuito e
 relazionale — è sostituita dall'auto-perfezionamento algoritmico.
 
-## Gioacchino da Fiore: lo schema trinitario della storia
+## Gioacchino da Fiore: lo schema trinitario della storia (Ouverture; confronto Ratzinger/Bonaventura)
 Tre età trinitarie (Padre-Legge, Figlio-Chiesa, Spirito-imminente). Bonaventura recepisce
 lo schema gioachimita ma lo corregge: nessuna rottura radicale, lo Spirito è sempre
 cristocentrico. Per Bachmann la correzione bonaventuriana è un freno, non
@@ -159,17 +163,23 @@ l'antidoto: contro la gnosi (che ipostatizza il momento del Figlio senza kenosi)
 l'unico antidoto reale è la dialettica portata fino alla sparizione dell'io
 (*Entwerdung*).
 
-## Dio vs necessità
+## Dio vs necessità (Illusione: «L'Ultima Cena», Postfazione)
 Come la grammatica del dono contro la grammatica della necessità, così l'Incarnazione
 è una scelta eterna dell'amore, non un passaggio obbligato: la risurrezione della carne
 non è un *backup* digitale ma una vita gloriosa e piena; la tecnologia, redenta, serve
 lo spirito invece di ingabbiarlo. *Ecce nova facio omnia* — «ecco, io faccio nuove
 tutte le cose» (Ap 21,5).
 
+## Esercizi — la pratica del dono
+Quarta area del sito: gli *Esercizi Spirituali di Sant'Ignazio* — quattro settimane di
+silenzio e discernimento. «La grammatica del dono non si legge soltanto — si pratica»:
+la Gelassenheit come esercizio quotidiano, non come teoria.
+
 ## Lessico ricorrente
 Dono che si dona senza ritorno; non-economia (il dono contato non è più dono); kenosi;
 gratuità contro necessità; Aufhebung dimezzata; Io alienato vs microcosmo trinitario;
 punto di tangenza; grazia che non fa i conti prima del tempo; santificazione del cosmo
 (non fuga dal mondo); caro cardo salutis; morte dello Spirito; Katechon (ciò che
-trattiene); immanentizzazione dell'eschaton; Incarnazione senza Croce; carne che risorge,
-non file di backup; Ecce nova facio omnia.
+trattiene); immanentizzazione dell'escaton; Incarnazione senza Croce; Pasqua senza
+Venerdì Santo; gnosticismo 2.0; eritis sicut dii; Aktbegriff (rivelazione come atto);
+carne che risorge, non file di backup; Ecce nova facio omnia.
