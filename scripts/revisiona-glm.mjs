@@ -1,4 +1,4 @@
-// Revisione qualità terzo revisore (glm-5.2) via API ollama cloud.
+// Revisione qualità terzo revisore (mistral-large-3) via API ollama cloud (ZDR, EU).
 // Uso: node scripts/revisiona-glm.mjs YYYY-MM-DD
 import fs from 'fs';
 import path from 'path';
@@ -8,7 +8,7 @@ import { caricaEnv } from './carica-env.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const radice = path.resolve(__dirname, '..');
 const ENDPOINT = 'https://ollama.com/v1/chat/completions';
-const MODELLO = 'glm-5.2';
+const MODELLO = 'mistral-large-3:675b';
 
 const data = process.argv[2];
 if (!data) {
@@ -89,7 +89,7 @@ const testo = (msg?.content || msg?.reasoning || '').trim();
 const approvata = /APPROVATA/i.test(testo);
 console.log(JSON.stringify({
   stato: approvata ? 'approvata' : 'rigenera',
-  revisore: 'glm-5.2',
+  revisore: 'mistral-large-3',
   piano: 'A',
   verdetto: testo,
 }));
