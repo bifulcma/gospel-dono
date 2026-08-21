@@ -75,14 +75,60 @@ punto di tangenza; grazia che non fa i conti prima del tempo.
 
 ---
 
-# Canone — Marcus Bachmann, *L'Illusione della Salvezza Tecnologica* + confronto Ratzinger/Bonaventura
+# Canone — Marcus Bachmann, *La dialettica occultata* (Overture) + *L'Illusione della Salvezza Tecnologica* + confronto Ratzinger/Bonaventura
 
-Seconda fonte citabile del paragrafo quotidiano. Quando il brano del giorno tocca
-creazione/materia/spirito, salvezza, escatologia, gnosi o tecnologia, si può citare da
-questo canone come *L'Illusione della Salvezza Tecnologica* (con sezione) o dal confronto
-*Ratzinger/Bonaventura* (saggio in preparazione: in voce si cita come «il mio confronto
-con Ratzinger», non come opera pubblicata). Resta l'unico riferimento congiunto di Bachmann oltre a
-*La logica del dono*: citare sempre con titolo e sezione, mai a memoria.
+Fonti ulteriori citabili del paragrafo quotidiano, accanto a *La logica del dono*:
+- **«La dialettica occultata»** — l'Overture della trilogia (PDF su marcus-bachmann), che
+  apre la partita: la tesi bocciata del giovane Ratzinger (Monaco 1955), la rivelazione
+  come atto nella storia, e il confronto con Hegel che non si può evitare. Si cita come
+  «La dialettica occultata» con sezione.
+- **L'Illusione della Salvezza Tecnologica** — il secondo libro della trilogia. Si cita
+  con titolo e sezione.
+- Il confronto **Ratzinger/Bonaventura** (dal manoscritto della tesi e dal saggio di
+  confronto, in preparazione): in voce si cita come «il mio confronto con Ratzinger»,
+  non come opera pubblicata.
+
+Quando il brano del giorno tocca creazione/materia/spirito, salvezza, escatologia,
+gnosi, tecnologia o il rapporto verità/storia, si può citare da queste fonti. Restano
+l'unico riferimento congiunto di Bachmann oltre a *La logica del dono*: citare sempre
+con titolo e sezione, mai a memoria.
+
+## La dialettica occultata (Overture)
+Nel settembre 1955 il giovane Ratzinger deposita a Monaco la tesi su Bonaventura: pensa
+la rivelazione non come deposito di verità ma come **atto che si compie nella storia**.
+Schmaus la boccia («pericoloso modernismo, soggettivizzazione del concetto di
+rivelazione») e Ratzinger, per salvare l'abilitazione, **taglia** la prima parte — il
+cuore del lavoro. Da quel taglio nasce la domanda che apre le due opere: *può la verità
+avere una storia, e restare un dono?* La dialettica occultata è la struttura a due poli
+che le pagine amputate avevano portato alla luce: il dono che è reale soltanto
+nell'essere accolto, la verità che vive nella relazione fra chi dà e chi riceve. Al
+Vaticano II le idee bocciate nel 1956 diventano dottrina conciliare (*Dei Verbum*, 1965):
+«*placuit Deo seipsum revelare*» — piacque a Dio rivelare se stesso.
+
+## Ratzinger non è Hegel — e proprio per questo deve confrontarsi con lui
+Ratzinger non deriva da Hegel, non ne condivide l'esito; ma avendo scelto la storia e la
+comunità come luogo della verità, gioca una partita di cui Hegel detta le regole: *come
+può la verità avere una storia senza dissolversi in essa?* La formula non è «Ratzinger è
+Hegel»: è «Ratzinger non è Hegel, e proprio per questo deve confrontarsi con lui». Il
+confronto è inevitabile perché la Trinità viva — il Padre che si consegna nel Figlio, il
+Figlio che si svuota (kénosi), lo Spirito che rilancia la relazione — è già il ritmo
+che Hegel vide e secolarizzò nell'*Aufhebung*. Hegel è lo *specchio deformante* in cui
+il cristianesimo vede riflesso e stravolto il proprio nucleo. Per tutta la vita Ratzinger
+tira un **freno**: nessuna terza età, nessun progresso della rivelazione dentro la
+storia, l'«ermeneutica della riforma, del rinnovamento nella continuità» (2005). Il
+freno è reale; ma un freno non è una risposta: trattenere un problema non è scioglierlo.
+
+## La partita: il Dono e l'Illusione
+Hegel traduce la Trinità in processo *necessario*; la Trinità cristiana è *dono* —
+gratuità, libertà, un amore non costretto a darsi e che tuttavia si dà. Il compito che
+Ratzinger apre e non chiude è tenere insieme il movimento e il dono. I due libri lo
+varcano: *La logica del dono* attraversa Hegel (l'unica omissione fatale è l'*analogia
+entis*; il Padre genera il Figlio non perché deve ma perché vuole; il Sabato Santo è la
+negazione che nessuna sintesi riassorbe); *L'Illusione della Salvezza Tecnologica* mostra
+il rovescio — la dialettica *senza* dono diventa processo, necessità che blinda lo
+Spirito, io che vedendo Dio farsi uomo conclude «anch'io sono Dio» e salta la kénosi
+(auto-divinizzazione senza morte dell'ego). C'è una sola dialettica intera, e più modi di
+mutilarla.
 
 ## La santificazione del cosmo (capp. «La Traslazione Gnostica», «L'Ultima Cena con Papa Benedetto XVI»; Postfazione)
 La salvezza cristiana non è la liberazione dalla carne, ma la sua trasfigurazione.
