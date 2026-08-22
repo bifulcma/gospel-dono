@@ -165,15 +165,9 @@ details.brano[open] summary { color: var(--terracotta-scuro); margin-bottom: .45
   font-size: 3.05em; line-height: .82; padding: .04em .09em 0 0;
 }
 
-/* accenti per voce */
+/* accento della voce unica del sito */
 .voce.dono { border-left-color: var(--terracotta-scuro); background: linear-gradient(var(--wash), var(--carta) 82%); }
 .voce.dono h2, .voce.dono .corpo > p:first-of-type::first-letter { color: var(--terracotta-scuro); }
-.voce.cattolica { border-left-color: var(--terracotta); }
-.voce.cattolica h2, .voce.cattolica .corpo > p:first-of-type::first-letter { color: var(--terracotta); }
-.voce.protestante { border-left-color: var(--salvia); }
-.voce.protestante h2, .voce.protestante .corpo > p:first-of-type::first-letter { color: var(--salvia); }
-.voce.dispensazionalista { border-left-color: var(--bruno); }
-.voce.dispensazionalista h2, .voce.dispensazionalista .corpo > p:first-of-type::first-letter { color: var(--bruno); }
 
 /* ── Navigazione tra i giorni ── */
 .nav-date {

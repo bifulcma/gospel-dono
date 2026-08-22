@@ -19,7 +19,7 @@ const sans = Inter({
 export const metadata = {
   title: 'Il Vangelo del giorno come dono',
   description:
-    'Il Vangelo del giorno commentato da tre voci — cattolica, protestante, dispensazionalista — e dalla logica del dono di Marcus Bachmann.',
+    'Il Vangelo del giorno commentato da Marcus Bachmann secondo la logica del dono: un paragrafo al giorno sulle letture, dal canone dei suoi libri.',
 };
 
 export default function RootLayout({ children }) {
@@ -30,11 +30,12 @@ export default function RootLayout({ children }) {
           <div className="dentro">
             <span className="sigillo" aria-hidden="true">✦ ✠ ✦</span>
             <a href="/" className="logo">Il Vangelo come <em>dono</em></a>
-            <p className="motto">tre voci, un solo criterio</p>
+            <p className="motto">Marcus Bachmann · un paragrafo al giorno</p>
             <nav className="principale" aria-label="Navigazione principale">
               <a href="/">Oggi</a>
               <a href="/archivio">Archivio</a>
               <a href="/rss.xml">RSS</a>
+              <a href="https://marcus-bachmann.vercel.app" target="_blank" rel="noopener">Marcus Bachmann ↗</a>
               <a href="https://esichia.vercel.app" target="_blank" rel="noopener">Esichia ↗</a>
             </nav>
           </div>
@@ -43,7 +44,7 @@ export default function RootLayout({ children }) {
         <footer className="sito">
           <div className="fregio" aria-hidden="true">❦</div>
           <em>Dove il dono si gioca, dove si irrigidisce in economia.</em><br />
-          Le voci scrivono dal di dentro delle rispettive tradizioni; ogni commento cita solo il proprio canone di fonti.
+          Marcus Bachmann scrive in prima persona sulle letture del giorno; ogni paragrafo cita solo il canone dei suoi libri.
         </footer>
       </body>
     </html>

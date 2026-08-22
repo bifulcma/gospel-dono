@@ -16,7 +16,7 @@ export async function GET(request) {
       <title>${esc(`${d} — ${titolo}`)}</title>
       <link>${origine}/${d}</link>
       <guid>${origine}/${d}</guid>
-      <description>${esc(`Vangelo: ${meta.vangelo || '—'}. Tre voci confessionali sotto la logica del dono.`)}</description>
+      <description>${esc(`Vangelo: ${meta.vangelo || '—'}. Il commento di Marcus Bachmann secondo la logica del dono.`)}</description>
       <pubDate>${new Date(d + 'T05:00:00Z').toUTCString()}</pubDate>
     </item>`;
     })
@@ -27,7 +27,7 @@ export async function GET(request) {
   <channel>
     <title>Il Vangelo del giorno come dono</title>
     <link>${origine}</link>
-    <description>Commento quotidiano del Vangelo da tre voci — cattolica, protestante, dispensazionalista — con la logica del dono di Marcus Bachmann.</description>
+    <description>Il Vangelo del giorno commentato da Marcus Bachmann secondo la logica del dono.</description>
     <language>it</language>
 ${items}
   </channel>

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Genera la BOZZA del giorno (3 voci confessionali + paragrafo Bachmann) SENZA committarla.
+// Genera la BOZZA del giorno (il paragrafo di Marcus Bachmann) SENZA committarla.
 // Percorso guidato da Hermes: la revisione qualitativa avviene dopo, la pubblicazione
 // la fa scripts/commit-giorno.mjs.
 //
@@ -16,8 +16,6 @@ caricaEnv(RADICE);
 
 const { lettureCattoliche } = await import(new URL('../lib/lezionario.js', import.meta.url));
 const { generaCommento, aiDisponibile } = await import(new URL('../lib/ai.js', import.meta.url));
-
-const VOCI = ['cattolica', 'protestante', 'dispensazionalista'];
 
 function esci(obj, codice = 0) {
   console.log(JSON.stringify(obj));
@@ -47,13 +45,6 @@ function pericopeCattolica(c) {
   );
 }
 
-function promptVoce(voce, c) {
-  return {
-    system: `${leggi(`prompts/voce-${voce}.md`)}\n\n---\n\nCANONE DI FONTI (le sole fonti citabili):\n\n${leggi(`canon/${voce}.md`)}`,
-    user: `${pericopeCattolica(c)}\nScrivi il commento del giorno seguendo la rubrica fissa. Rispondi con il SOLO testo del commento, senza titoli né premesse.`,
-  };
-}
-
 function promptBachmann(c) {
   return {
     system: `${leggi('prompts/bachmann.md')}\n\n---\n\nIL TUO CANONE (il tuo libro, unica fonte citabile):\n\n${leggi('canon/bachmann.md')}`,
@@ -61,7 +52,7 @@ function promptBachmann(c) {
   };
 }
 
-function comporreMD(c, bozze, dono) {
+function comporreMD(c, dono) {
   const q = (v) => JSON.stringify(v || null);
   return `---
 data: "${data}"
@@ -81,18 +72,6 @@ generato: "ai-hermes"
 ## La logica del dono
 
 ${dono}
-
-## Voce cattolica
-
-${bozze.cattolica}
-
-## Voce protestante
-
-${bozze.protestante}
-
-## Voce dispensazionalista
-
-${bozze.dispensazionalista}
 `;
 }
 
@@ -100,28 +79,16 @@ try {
   const c = await lettureCattoliche(data);
   if (!c) esci({ stato: 'errore', dettaglio: 'lezionario cattolico non raggiungibile' }, 1);
 
-  const bozze = {};
-  let dono = '';
-  await Promise.all([
-    generaCommento(promptBachmann(c)).then((t) => { dono = t; }),
-    ...VOCI.map(async (voce) => {
-      bozze[voce] = await generaCommento(promptVoce(voce, c));
-    }),
-  ]);
-  if (dono && !/Marcus Bachmann/.test(dono)) dono += '\n\n*Marcus Bachmann*';
+  let dono = await generaCommento(promptBachmann(c));
   if (!dono) esci({ stato: 'errore', dettaglio: 'paragrafo Bachmann non generato' }, 1);
+  if (!/Marcus Bachmann/.test(dono)) dono += '\n\n*Marcus Bachmann*';
 
   const dirTmp = path.join(RADICE, '.tmp');
   fs.mkdirSync(dirTmp, { recursive: true });
   const percorso = path.join(dirTmp, `bozza-${data}.md`);
-  fs.writeFileSync(percorso, comporreMD(c, bozze, dono));
+  fs.writeFileSync(percorso, comporreMD(c, dono));
 
-  esci({
-    stato: 'bozza',
-    data,
-    percorso,
-    voci: { ...Object.fromEntries(VOCI.map((v) => [v, Boolean(bozze[v])])), bachmann: Boolean(dono) },
-  });
+  esci({ stato: 'bozza', data, percorso, bachmann: Boolean(dono) });
 } catch (e) {
   esci({ stato: 'errore', dettaglio: String(e?.message || e).slice(0, 300) }, 1);
 }
