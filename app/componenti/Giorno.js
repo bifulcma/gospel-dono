@@ -1,15 +1,10 @@
 import { marked } from 'marked';
 
-const CLASSI = [
-  { test: /logica del dono/i, classe: 'dono', firma: 'La voce principale · Marcus Bachmann, dal suo La logica del dono' },
-  { test: /cattolica/i, classe: 'cattolica', firma: 'Balthasar · Marion · CCC · Ratzinger' },
-  { test: /protestante/i, classe: 'protestante', firma: 'Lutero · Calvino · Confessioni · Barth · Bonhoeffer' },
-  { test: /dispensazionalista/i, classe: 'dispensazionalista', firma: 'Scofield · Darby · Chafer · Ryrie · Walvoord — chiave premillenarista dichiarata' },
-];
-
-function stileSezione(titolo) {
-  return CLASSI.find((c) => c.test.test(titolo)) || { classe: '', firma: '' };
-}
+// Il sito ha una voce sola: il paragrafo di Marcus Bachmann. I giorni d'archivio
+// generati quando c'erano anche le voci confessionali conservano quelle sezioni nel
+// file, ma non vengono più pubblicate.
+const SEZIONE_DONO = /logica del dono/i;
+const FIRMA_DONO = 'Marcus Bachmann, dal suo La logica del dono';
 
 function Brano({ testo, aperto = false }) {
   if (!testo) return null;
@@ -32,7 +27,7 @@ export default function Giorno({ giorno }) {
       <header className="capo">
         <p className="eyebrow">{dataIT}</p>
         <h1 className="titolo">{meta.titolo && meta.titolo !== 'DA INSERIRE' ? meta.titolo : 'Il Vangelo del giorno'}</h1>
-        <p className="sottotitolo">Tre voci, un criterio: il dono.</p>
+        <p className="sottotitolo">Una voce, un criterio: il dono.</p>
         <div className="fregio" aria-hidden="true">❦</div>
       </header>
 
@@ -70,17 +65,15 @@ export default function Giorno({ giorno }) {
 
       <div className="fregio" aria-hidden="true">❦</div>
 
-      {sezioni.map((s) => {
-        // sezioni con titolo non mappato (es. giorni in vecchia struttura) rendono senza accento né firma
-        const { classe, firma } = stileSezione(s.titolo);
-        return (
-          <section key={s.titolo} className={`voce ${classe}`}>
+      {sezioni
+        .filter((s) => SEZIONE_DONO.test(s.titolo))
+        .map((s) => (
+          <section key={s.titolo} className="voce dono">
             <h2>{s.titolo}</h2>
-            {firma ? <p className="firma">{firma}</p> : null}
+            <p className="firma">{FIRMA_DONO}</p>
             <div className="corpo" dangerouslySetInnerHTML={{ __html: marked.parse(s.corpo) }} />
           </section>
-        );
-      })}
+        ))}
     </article>
   );
 }

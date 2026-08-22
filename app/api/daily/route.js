@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { generaGiorno } from '../../../lib/pipeline';
 
 export const dynamic = 'force-dynamic';
-export const maxDuration = 300; // 4 voci + editor (+ eventuali rigenerazioni): servono minuti, non secondi
+export const maxDuration = 300; // paragrafo + editor (+ eventuali rigenerazioni): servono minuti, non secondi
 
 // Chiamata dal cron Vercel ogni giorno alle 02:00 UTC (vercel.json).
 // In locale: curl "http://localhost:3000/api/daily?data=2026-08-14"

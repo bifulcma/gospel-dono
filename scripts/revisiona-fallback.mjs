@@ -33,19 +33,19 @@ const userPrompt = `La bozza del giorno è:
 ${testoBozza}
 ---
 
-Verifica DUE dimensioni:
+Il sito ha una voce sola: il paragrafo 'La logica del dono', scritto in prima persona da Marcus Bachmann. Verifica DUE dimensioni:
 A) STRUTTURA E ORTODOSSIA:
-(1) ogni voce (cattolica, protestante, dispensazionalista) è in prima persona confessionale e cita SOLO il proprio canone (Balthasar/Marion/CCC per la cattolica; Lutero/Calvino/Bonhoeffer per la protestante; Scofield/Darby/Ryrie per la dispensazionalista) — niente citazioni inventate o fuori canone;
-(2) il paragrafo 'La logica del dono' è in prima persona come Marcus Bachmann e cita SOLO i suoi scritti (La Logica del Dono, La dialettica occultata, L'Illusione della Salvezza Tecnologica, o gli Esercizi), coerente col canone;
-(3) rubricatura completa (frontmatter, letture del giorno corrette, domanda finale per sezione).
+(1) il paragrafo è in prima persona come Marcus Bachmann e cita SOLO i suoi scritti (La Logica del Dono, La dialettica occultata, L'Illusione della Salvezza Tecnologica, o gli Esercizi) o la Scrittura del giorno, coerente col canone — niente citazioni inventate o fuori canone;
+(2) nasce davvero dalle letture del giorno e non è un pezzo di teoria buono per qualunque pericope;
+(3) rubricatura completa (frontmatter, letture del giorno corrette, domanda finale, firma Marcus Bachmann).
 
 B) QUALITÀ della scrittura:
-(4) tono: niente caricature confessionali ('i cattolici credono che', stereotipi), niente gergo;
-(5) fedeltà alla voce di Bachmann: concetti (grammatica del dono vs necessità, kenosi, punto di tangenza, santificazione del cosmo) usati con precisione, senza sconfinare nel lessico altrui;
-(6) densità e valore: ogni voce ha un gancio (esegesi con citazione, movimento spirituale, domanda finale), testo pubblicabile e dignitoso;
-(7) coerenza interna tra le sezioni.
+(4) tono: niente gergo, niente predica, l'ironia apre il testo invece di appesantirlo;
+(5) fedeltà alla voce di Bachmann: concetti (grammatica del dono vs necessità, kenosi, punto di tangenza, santificazione del cosmo) usati con precisione;
+(6) densità e valore: c'è un gancio (esegesi con citazione, movimento dono-vs-economia, domanda finale), testo pubblicabile e dignitoso;
+(7) niente formule di repertorio o schemi identici ai giorni precedenti.
 
-Rispondi SOLO con: 'APPROVATA' se struttura ORTODOSSA E qualità sufficiente; oppure 'RIGENERA - motivo preciso' (indica la voce o sezione da correggere e perché). Niente altro.`;
+Rispondi SOLO con: 'APPROVATA' se struttura ORTODOSSA E qualità sufficiente; oppure 'RIGENERA - motivo preciso' (indica cosa correggere e perché). Niente altro.`;
 
 caricaEnv(radice);
 if (!process.env.OLLAMA_API_KEY) {
