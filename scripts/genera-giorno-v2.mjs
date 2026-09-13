@@ -5,9 +5,9 @@
 //      nel prompt con divieto di riusare aperture, snodi e formule.
 //   2. rotazione: l'angolo di ingresso del giorno è scelto da un calendario a
 //      rotazione (7 porte), annotato nel frontmatter.
-// NON committa nulla: lascia la bozza in .tmp/bozza-YYYY-MM-DD.md (v1: scripts/genera-giorno-v1-backup.mjs).
+// NON committa nulla: lascia la bozza in .tmp/bozza-v2-YYYY-MM-DD.md.
 //
-// Uso:  node scripts/genera-giorno.mjs [YYYY-MM-DD]
+// Uso: node scripts/genera-giorno-v2.mjs [YYYY-MM-DD]
 
 import fs from 'fs';
 import path from 'path';
@@ -106,7 +106,7 @@ const esitoCancello = {
 // --- bozza v2 ---
 const dirTmp = path.join(RADICE, '.tmp');
 fs.mkdirSync(dirTmp, { recursive: true });
-const percorso = path.join(dirTmp, `bozza-${data}.md`);
+const percorso = path.join(dirTmp, `bozza-v2-${data}.md`);
 const q = (v) => JSON.stringify(v || null);
 const md = `---
 data: "${data}"
@@ -133,7 +133,7 @@ ${dono}
 fs.writeFileSync(percorso, md);
 
 esci({
-  stato: 'bozza',
+  stato: 'bozza-v2',
   data,
   percorso,
   porta: portaOggi,
