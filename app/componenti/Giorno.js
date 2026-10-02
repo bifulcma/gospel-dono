@@ -61,7 +61,7 @@ export default function Giorno({ giorno }) {
             </>
           ) : null}
           <p className="lectio-invito">
-            <a href={`/lectio?data=${giorno.data}`}>Fai la lectio divina su queste letture →</a>
+            <a href="/percorso">Il percorso degli Esercizi di sant’Ignazio →</a>
           </p>
         </section>
       </div>

@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
             <p className="motto">Marcus Bachmann · un paragrafo al giorno</p>
             <nav className="principale" aria-label="Navigazione principale">
               <a href="/">Oggi</a>
-              <a href="/lectio">Lectio</a>
+              <a href="/percorso">Percorso</a>
               <a href="/archivio">Archivio</a>
               <a href="/rss.xml">RSS</a>
               <a href="https://marcus-bachmann.vercel.app" target="_blank" rel="noopener">Marcus Bachmann ↗</a>
