@@ -60,6 +60,9 @@ export default function Giorno({ giorno }) {
               <Brano testo={meta.salmo_testo} />
             </>
           ) : null}
+          <p className="lectio-invito">
+            <a href={`/lectio?data=${giorno.data}`}>Fai la lectio divina su queste letture →</a>
+          </p>
         </section>
       </div>
 
