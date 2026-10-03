@@ -99,12 +99,21 @@ export default function Percorso() {
 
   useEffect(() => {
     const s = leggi(CHIAVE_STATO, null);
+    const d = leggi(CHIAVE_DIARIO, []);
     if (s && Number.isInteger(s.raggiunta)) {
-      const r = Math.min(Math.max(s.raggiunta, 0), TAPPE.length - 1);
-      setStato({ raggiunta: r, corrente: Math.min(Math.max(s.corrente ?? r, 0), r) });
+      let r = Math.min(Math.max(s.raggiunta, 0), TAPPE.length - 1);
+      let c = Math.min(Math.max(s.corrente ?? r, 0), r);
+      // Seduta salvata sull'ultima tappa raggiunta e pagina chiusa senza scegliere:
+      // si prosegue, a meno che la persona abbia chiesto di ripeterla.
+      const id = TAPPE[c].id;
+      if (c === r && c < TAPPE.length - 1 && s.ripeti !== id && d.some((x) => x.tappaId === id)) {
+        r = c = c + 1;
+        dire(`Hai concluso «${TAPPE[c - 1].titolo}»: oggi si prosegue.`);
+      }
+      setStato({ raggiunta: r, corrente: c, ripeti: c === s.corrente ? s.ripeti : undefined });
     }
     setBozze(leggi(CHIAVE_BOZZE, {}));
-    setDiario(leggi(CHIAVE_DIARIO, []));
+    setDiario(d);
     setPronto(true);
   }, []);
 
@@ -216,6 +225,7 @@ export default function Percorso() {
       return resto;
     });
     setSalvata(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function avanza() {
@@ -227,6 +237,7 @@ export default function Percorso() {
   }
 
   function ripeti() {
+    setStato((s) => ({ ...s, ripeti: tappa.id }));
     setPasso(0);
     setSalvata(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
