@@ -20,6 +20,25 @@ export const metadata = {
   title: 'Il Vangelo del giorno come dono',
   description:
     'Il Vangelo del giorno commentato da Marcus Bachmann secondo la logica del dono: un paragrafo al giorno sulle letture, dal canone dei suoi libri.',
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: [
+      { url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Percorso',
+  },
+};
+
+export const viewport = {
+  themeColor: '#FAF6EE',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
@@ -47,6 +66,7 @@ export default function RootLayout({ children }) {
           <em>Dove il dono si gioca, dove si irrigidisce in economia.</em><br />
           Marcus Bachmann scrive in prima persona sulle letture del giorno; ogni paragrafo cita solo il canone dei suoi libri.
         </footer>
+        <script src="/sw-register.js" defer></script>
       </body>
     </html>
   );

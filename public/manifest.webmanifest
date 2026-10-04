@@ -1,0 +1,17 @@
+{
+  "name": "Il Vangelo come dono · Percorso di Ignazio",
+  "short_name": "Percorso",
+  "description": "Il Vangelo del giorno come dono, con il Percorso degli Esercizi di Sant'Ignazio a 60 tappe.",
+  "lang": "it",
+  "start_url": "/percorso",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF6EE",
+  "theme_color": "#FAF6EE",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
