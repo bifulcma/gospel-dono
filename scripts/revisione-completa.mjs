@@ -44,7 +44,7 @@ ${testoBozza}
 
 Il sito ha una voce sola: il paragrafo 'La logica del dono', scritto in prima persona da Marcus Bachmann. Verifica DUE dimensioni:
 A) STRUTTURA E ORTODOSSIA:
-(1) il paragrafo è in prima persona come Marcus Bachmann e cita SOLO i suoi scritti (La Logica del Dono, La dialettica occultata, L'Illusione della Salvezza Tecnologica, o gli Esercizi) o la Scrittura del giorno, coerente col canone — niente citazioni inventate o fuori canone;
+(1) il paragrafo è in prima persona come Marcus Bachmann e cita SOLO i suoi scritti (La Logica del Dono, La dialettica occultata, L'Illusione della Salvezza Tecnologica, o gli Esercizi) o la Scrittura del giorno. Il canone è l'insieme di tutti i testi di Marcus Bachmann: sono AMMESSI e NON vanno contestati gli autori e i riferimenti che vi compaiono (es. Eckhart, Hegel, Balthasar, i Padri). Contesta solo citazioni inventate o attribuite falsamente;
 (2) nasce davvero dalle letture del giorno e non è un pezzo di teoria buono per qualunque pericope;
 (3) rubricatura completa (frontmatter, letture del giorno corrette, domanda finale, firma Marcus Bachmann).
 
