@@ -307,6 +307,32 @@ ul.diario-lista li { border-bottom: 1px solid var(--line); }
 .diario-corpo p { font-family: var(--serif); font-size: 1.08rem; white-space: pre-wrap; overflow-wrap: anywhere; }
 .diario-corpo a { font-size: .85rem; }
 
+.sincronia { margin-top: .6rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.sincronia summary {
+  cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem;
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+  transition: color .18s ease;
+}
+.sincronia summary::-webkit-details-marker { display: none; }
+.sincronia summary::before { content: "❧"; color: var(--terracotta); font-size: .9rem; }
+.sincronia summary:hover, .sincronia[open] summary { color: var(--terracotta-scuro); }
+.sincronia summary small { font-size: .82rem; letter-spacing: 0; text-transform: none; color: var(--muted); font-style: italic; font-family: var(--serif); }
+.sincronia-corpo { display: flex; flex-direction: column; gap: .8rem; }
+.sincronia[open] > .sincronia-corpo { margin-top: .9rem; }
+.sincronia label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--rame); font-weight: 600; }
+.sincronia input {
+  flex: 1 1 15rem; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--ink);
+  background: var(--carta); border: 1px solid var(--line-forte); border-radius: 4px; padding: .55rem .8rem;
+}
+.sincronia input::placeholder { color: var(--line-forte); }
+.sincronia-codice {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.08rem; letter-spacing: .08em;
+  background: var(--carta); border: 1px dashed var(--line-forte); border-radius: 4px; padding: .6rem .8rem;
+  user-select: all; overflow-wrap: anywhere;
+}
+.lectio-btn:disabled { opacity: .55; cursor: default; }
+
 .lectio-avviso {
   position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(1.2rem + env(safe-area-inset-bottom, 0px));
   background: var(--ink); color: var(--carta); padding: .6rem 1.2rem; border-radius: 999px; font-size: .9rem;

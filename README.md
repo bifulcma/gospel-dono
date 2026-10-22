@@ -12,7 +12,7 @@ npm run dev        # http://localhost:3000
 ## Struttura
 
 ```
-app/                pagine (/, /[date], /archivio, /rss.xml) + /api/daily
+app/                pagine (/, /[date], /archivio, /percorso, /rss.xml) + /api/daily, /api/percorso
 lib/content.js      lettura dei file content/*.md (frontmatter + sezioni "## ...")
 lib/lezionario.js   lezionario cattolico via Evangelizo (con seconda lettura nelle domeniche/solennità)
 lib/pipeline.js     assembla i prompt e scrive content/YYYY-MM-DD.md
@@ -25,6 +25,10 @@ vercel.json         cron giornaliero 02:00 UTC → GET /api/daily
 Formato di `content/YYYY-MM-DD.md`: frontmatter (letture con testi integrali, seconda lettura inclusa quando c'è) + la sezione `## La logica del dono`.
 
 I due giorni presenti (12–13 agosto 2026) sono **esempi dimostrativi** (`demo: true`): mostrano la rubrica reale — esegesi con citazione dal canone, dono vs economia, domanda al lettore.
+
+## Percorso: sincronizzazione tra dispositivi
+
+`/percorso` salva tutto nel browser; con un codice personale una copia **cifrata nel browser** va su Supabase (via `/api/percorso`, service role solo lato server). Passi e dettagli: [`supabase/README.md`](supabase/README.md).
 
 ## Regole editoriali (non negoziabili)
 

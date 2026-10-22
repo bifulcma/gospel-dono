@@ -4,11 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import {
   TAPPE, FASI, REGOLE, ORAZIONE_PREPARATORIA, ADDIZIONE_INGRESSO, ESAME_PREGHIERA,
 } from '../../lib/percorso';
+import {
+  CHIAVE_STATO, CHIAVE_BOZZE, CHIAVE_DIARIO, leggi, scrivi, useSincronia, Sincronia,
+} from './Sincronia';
 
 // Il percorso degli Esercizi, una tappa alla volta, nell'ordine del libro.
 // Si avanza quando la persona lo decide [4], si può ripetere [62], e non si legge
 // il mistero che non si deve ancora contemplare [127]: le tappe future restano velate.
-// Tutto resta nel browser (localStorage): il sito non ha account né database.
+// Tutto resta nel browser (localStorage), senza account. Chi vuole ritrovarlo su un altro
+// dispositivo crea un codice personale: una copia cifrata con quel codice va sul server.
 
 const PASSI = [
   { k: 'preparazione', n: 'I', t: 'Preparazione' },
@@ -22,28 +26,19 @@ const STATI = [
   { k: 'desolazione', t: 'Desolazione' },
   { k: 'quiete', t: 'Né l’una né l’altra' },
 ];
-const CHIAVE_STATO = 'percorso-stato-v1';
-const CHIAVE_BOZZE = 'percorso-bozze-v1';
-const CHIAVE_DIARIO = 'percorso-diario-v1';
 const ARCO = 289.03;
 
 const vuota = () => ({ note: '', colloquio: '', esame: '', stato: '', minutes: 30, silenced: 0 });
 
-function leggi(chiave, base) {
-  try {
-    const v = JSON.parse(localStorage.getItem(chiave) || 'null');
-    return v ?? base;
-  } catch {
-    return base;
-  }
-}
-function scrivi(chiave, valore) {
-  try {
-    localStorage.setItem(chiave, JSON.stringify(valore));
-    return true;
-  } catch {
-    return false;
-  }
+// Dove riprendere. Seduta salvata sull'ultima tappa raggiunta e pagina chiusa senza
+// scegliere: si prosegue, a meno che la persona abbia chiesto di ripeterla.
+function riprendi(s, d) {
+  let r = Math.min(Math.max(s.raggiunta, 0), TAPPE.length - 1);
+  let c = Math.min(Math.max(s.corrente ?? r, 0), r);
+  const id = TAPPE[c].id;
+  const avanti = c === r && c < TAPPE.length - 1 && s.ripeti !== id && d.some((x) => x.tappaId === id);
+  if (avanti) r = c = c + 1;
+  return { stato: { raggiunta: r, corrente: c, ripeti: c === s.corrente ? s.ripeti : undefined }, avanti };
 }
 
 function campana(ctxRef) {
@@ -97,20 +92,16 @@ export default function Percorso() {
   const timerRef = useRef(timer);
   timerRef.current = timer;
 
+  const sync = useSincronia({ pronto, stato, bozze, diario, applica: ricevi });
+
   useEffect(() => {
     const s = leggi(CHIAVE_STATO, null);
     const d = leggi(CHIAVE_DIARIO, []);
     if (s && Number.isInteger(s.raggiunta)) {
-      let r = Math.min(Math.max(s.raggiunta, 0), TAPPE.length - 1);
-      let c = Math.min(Math.max(s.corrente ?? r, 0), r);
-      // Seduta salvata sull'ultima tappa raggiunta e pagina chiusa senza scegliere:
-      // si prosegue, a meno che la persona abbia chiesto di ripeterla.
-      const id = TAPPE[c].id;
-      if (c === r && c < TAPPE.length - 1 && s.ripeti !== id && d.some((x) => x.tappaId === id)) {
-        r = c = c + 1;
-        dire(`Hai concluso «${TAPPE[c - 1].titolo}»: oggi si prosegue.`);
-      }
-      setStato({ raggiunta: r, corrente: c, ripeti: c === s.corrente ? s.ripeti : undefined });
+      // Con la sincronizzazione attiva si decide dopo aver sentito gli altri dispositivi.
+      const { stato: inizio, avanti } = riprendi(s, sync.inAttesa() ? [] : d);
+      if (avanti) dire(`Hai concluso «${TAPPE[inizio.corrente - 1].titolo}»: oggi si prosegue.`);
+      setStato(inizio);
     }
     setBozze(leggi(CHIAVE_BOZZE, {}));
     setDiario(d);
@@ -132,6 +123,21 @@ export default function Percorso() {
     setAvviso(msg);
     clearTimeout(avvisoT.current);
     avvisoT.current = setTimeout(() => setAvviso(''), 2800);
+  }
+
+  // Dati arrivati dagli altri dispositivi, già uniti con quelli di qui.
+  function ricevi(cambi, primo) {
+    if (cambi.diario) {
+      scrivi(CHIAVE_DIARIO, cambi.diario);
+      setDiario(cambi.diario);
+    }
+    if (cambi.bozze) setBozze(cambi.bozze);
+    // Alla prima sincronizzazione si decide se proseguire, come all'apertura della
+    // pagina; non mentre si è dentro una seduta.
+    const libero = primo && passo === 0 && !salvata && !timerRef.current.attivo;
+    const { stato: nuovo, avanti } = riprendi(cambi.stato || stato, libero ? cambi.diario || diario : []);
+    if (cambi.stato || avanti) setStato(nuovo);
+    if (avanti) dire(`Hai concluso «${TAPPE[nuovo.corrente - 1].titolo}»: oggi si prosegue.`);
   }
 
   function aggiorna(campi) {
@@ -245,6 +251,7 @@ export default function Percorso() {
 
   function elimina(id) {
     if (daEliminare !== id) return setDaEliminare(id);
+    sync.eliminata(id);
     const nuovo = diario.filter((s) => s.id !== id);
     scrivi(CHIAVE_DIARIO, nuovo);
     setDiario(nuovo);
@@ -254,6 +261,7 @@ export default function Percorso() {
 
   function azzera() {
     if (!daAzzerare) return setDaAzzerare(true);
+    sync.azzerato();
     setStato({ raggiunta: 0, corrente: 0 });
     setBozze({});
     setDaAzzerare(false);
@@ -534,7 +542,11 @@ export default function Percorso() {
           <div><b>{diario.length}</b><span>sedute</span></div>
           <div><b>{minutiTot}</b><span>minuti di preghiera</span></div>
         </div>
-        <p className="lectio-nota">Il diario resta in questo browser, su questo dispositivo: nessuno, nemmeno il sito, lo legge.</p>
+        <p className="lectio-nota">
+          {sync.codice
+            ? 'Il diario resta in questo browser e, cifrato con il tuo codice, sul server per gli altri tuoi dispositivi: nessuno, nemmeno il sito, lo legge.'
+            : 'Il diario resta in questo browser, su questo dispositivo: nessuno, nemmeno il sito, lo legge.'}
+        </p>
         {pronto && diario.length === 0 ? (
           <p className="diario-vuoto">
             Qui compariranno le tue sedute: la tappa, se c’è stata consolazione o desolazione, il colloquio
@@ -578,6 +590,7 @@ export default function Percorso() {
             ))}
           </ul>
         )}
+        {pronto ? <Sincronia sync={sync} dire={dire} /> : null}
       </section>
 
       {avviso ? <div className="lectio-avviso" role="status">{avviso}</div> : null}
