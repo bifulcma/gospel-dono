@@ -272,19 +272,8 @@ function descrivi({ fase, quando }) {
   return 'collegato';
 }
 
-export function Sincronia({ sync, dire }) {
+function CampoCodice({ id, etichetta, principale, sync, dire }) {
   const [testo, setTesto] = useState('');
-  const [conferma, setConferma] = useState(false);
-  const { codice, esito } = sync;
-
-  async function copia(valore, fatto) {
-    try {
-      await navigator.clipboard.writeText(valore);
-      dire(fatto);
-    } catch {
-      dire('Non riesco a copiare: selezionalo e copialo a mano');
-    }
-  }
 
   function collega(e) {
     e.preventDefault();
@@ -296,10 +285,75 @@ export function Sincronia({ sync, dire }) {
     }
   }
 
+  return (
+    <form className="sincronia-corpo" onSubmit={collega}>
+      <label htmlFor={id}>{etichetta}</label>
+      <div className="lectio-riga">
+        <input
+          id={id}
+          value={testo}
+          onChange={(e) => setTesto(e.target.value)}
+          placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+          autoComplete="off"
+          autoCapitalize="characters"
+          spellCheck={false}
+        />
+        <button className={principale ? 'lectio-btn' : 'lectio-btn quieto'} type="submit" disabled={!testo.trim()}>
+          Collega
+        </button>
+      </div>
+    </form>
+  );
+}
+
+// L'icona sulla schermata Home (iPhone) apre un'app con una memoria sua, separata da Safari:
+// senza codice parte vuota. In cima alla pagina si chiede di collegarla al percorso che c'è già.
+export function CollegaIcona({ sync, dire }) {
+  const [installata, setInstallata] = useState(false);
+
+  useEffect(() => {
+    setInstallata(window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true);
+  }, []);
+
+  if (!installata || sync.codice) return null;
+  return (
+    <section className="collega-icona" aria-labelledby="collega-icona-titolo">
+      <h2 id="collega-icona-titolo">Collega questa icona al tuo percorso</h2>
+      <p className="lectio-nota">
+        L’icona ha una memoria sua, separata da Safari: va collegata una volta sola. Il codice lo trovi in Safari,
+        in fondo a questa pagina, alla voce «Sincronizza su un altro dispositivo».
+      </p>
+      <CampoCodice id="icona-codice" etichetta="Incolla qui il codice o il link" principale sync={sync} dire={dire} />
+    </section>
+  );
+}
+
+export function Sincronia({ sync, dire }) {
+  const [conferma, setConferma] = useState(false);
+  const [creare, setCreare] = useState(false);
+  const { codice, esito } = sync;
+
+  async function copia(valore, fatto) {
+    try {
+      await navigator.clipboard.writeText(valore);
+      dire(fatto);
+    } catch {
+      dire('Non riesco a copiare: selezionalo e copialo a mano');
+    }
+  }
+
+  // Chi ha già un codice altrove e ne crea uno nuovo finisce in un archivio vuoto.
+  function crea() {
+    if (!creare) return setCreare(true);
+    sync.attiva();
+    setCreare(false);
+  }
+
   function scollega() {
     if (!conferma) return setConferma(true);
     sync.scollega();
     setConferma(false);
+    setCreare(false);
     dire('Questo dispositivo non si sincronizza più. Ciò che è qui resta.');
   }
 
@@ -345,24 +399,17 @@ export function Sincronia({ sync, dire }) {
             crea un codice personale: con quel codice tutto viene cifrato qui, prima di partire, e custodito sul
             server del sito. Senza il codice nessuno, nemmeno il sito, può leggerlo.
           </p>
+          {creare ? (
+            <p className="lectio-nota" role="status">
+              Hai già un codice su un altro dispositivo? Allora non crearne uno nuovo: incollalo qui sotto.
+            </p>
+          ) : null}
           <div className="lectio-riga">
-            <button className="lectio-btn vuoto" onClick={sync.attiva}>Crea il mio codice</button>
+            <button className="lectio-btn vuoto" onClick={crea}>
+              {creare ? 'Crea comunque? Tocca di nuovo' : 'Crea il mio codice'}
+            </button>
           </div>
-          <form className="sincronia-corpo" onSubmit={collega}>
-            <label htmlFor="sinc-codice">Hai già un codice? Incollalo qui</label>
-            <div className="lectio-riga">
-              <input
-                id="sinc-codice"
-                value={testo}
-                onChange={(e) => setTesto(e.target.value)}
-                placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
-                autoComplete="off"
-                autoCapitalize="characters"
-                spellCheck={false}
-              />
-              <button className="lectio-btn quieto" type="submit" disabled={!testo.trim()}>Collega</button>
-            </div>
-          </form>
+          <CampoCodice id="sinc-codice" etichetta="Hai già un codice? Incollalo qui" sync={sync} dire={dire} />
         </div>
       )}
     </details>

@@ -5,7 +5,7 @@ import {
   TAPPE, FASI, REGOLE, ORAZIONE_PREPARATORIA, ADDIZIONE_INGRESSO, ESAME_PREGHIERA,
 } from '../../lib/percorso';
 import {
-  CHIAVE_STATO, CHIAVE_BOZZE, CHIAVE_DIARIO, leggi, scrivi, useSincronia, Sincronia,
+  CHIAVE_STATO, CHIAVE_BOZZE, CHIAVE_DIARIO, leggi, scrivi, useSincronia, Sincronia, CollegaIcona,
 } from './Sincronia';
 
 // Il percorso degli Esercizi, una tappa alla volta, nell'ordine del libro.
@@ -307,6 +307,8 @@ export default function Percorso() {
 
   return (
     <div className="lectio">
+      {pronto ? <CollegaIcona sync={sync} dire={dire} /> : null}
+
       {/* dove sono nel cammino */}
       <div className="cammino-testa">
         <div className="cammino-dove">

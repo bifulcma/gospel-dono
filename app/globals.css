@@ -319,13 +319,18 @@ ul.diario-lista li { border-bottom: 1px solid var(--line); }
 .sincronia summary small { font-size: .82rem; letter-spacing: 0; text-transform: none; color: var(--muted); font-style: italic; font-family: var(--serif); }
 .sincronia-corpo { display: flex; flex-direction: column; gap: .8rem; }
 .sincronia[open] > .sincronia-corpo { margin-top: .9rem; }
-.sincronia label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--rame); font-weight: 600; }
-.sincronia input {
+.sincronia label, .collega-icona label { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--rame); font-weight: 600; }
+.sincronia input, .collega-icona input {
   flex: 1 1 15rem; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1rem;
   letter-spacing: .06em; text-transform: uppercase; color: var(--ink);
   background: var(--carta); border: 1px solid var(--line-forte); border-radius: 4px; padding: .55rem .8rem;
 }
-.sincronia input::placeholder { color: var(--line-forte); }
+.sincronia input::placeholder, .collega-icona input::placeholder { color: var(--line-forte); }
+.collega-icona {
+  display: flex; flex-direction: column; gap: .8rem; margin-bottom: 1.6rem; padding: 1rem 1.1rem;
+  background: linear-gradient(var(--wash), var(--carta)); border-left: 3px solid var(--terracotta-scuro); border-radius: 4px;
+}
+.collega-icona h2 { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; line-height: 1.3; }
 .sincronia-codice {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.08rem; letter-spacing: .08em;
   background: var(--carta); border: 1px dashed var(--line-forte); border-radius: 4px; padding: .6rem .8rem;
